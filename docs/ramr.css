@@ -1,5 +1,5 @@
 :root {
-    --htmlbackground: url('../images/card/hkcentralblur5.jpg') no-repeat center center fixed;
+    --htmlbackground: url('https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/hkcentralblur5.jpg') no-repeat center center fixed;
     --background-dark: #2d3548;
     --text-light: rgba(255, 255, 255, 0.6);
     --text-lighter: rgba(255, 255, 255, 0.9);
@@ -19,12 +19,12 @@
     --card-width: 440px;
     --card-menu-width: 500px;
     --card-menudiv-height: 450px;
-    --card1bg: url(../images/card/cgo1.jpg);
-    --card2bg: url(../images/card/park.jpg);
-    --card3bg: url(../images/card/park2.jpg);
-    --card4bg: url(../images/card/watertap.jpg);
-    --card5bg: url(../images/card/stanley.jpg);
-    --card6bg: url(../images/card/glasswall.jpg);
+    --card1bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/cgo1.jpg);
+    --card2bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/park.jpg);
+    --card3bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/park2.jpg);
+    --card4bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/watertap.jpg);
+    --card5bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/stanley.jpg);
+    --card6bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/glasswall.jpg);
 }
 
 .menubar {
