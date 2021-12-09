@@ -1,5 +1,6 @@
 :root {
-    --htmlbackground: url('https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/hkcentralblur5.jpg') no-repeat center center fixed;
+    /*https://raw.githubusercontent.com/raychunghk/ramr/main/static*/
+    --htmlbackground: url('static/images/card/hkcentralblur5.jpg') no-repeat center center fixed;
     --background-dark: #2d3548;
     --text-light: rgba(255, 255, 255, 0.6);
     --text-lighter: rgba(255, 255, 255, 0.9);
@@ -14,17 +15,18 @@
     --box4-color: rgba(233, 196, 106, 0.90);
     --box5-color: rgba(244, 162, 97, 0.90);
     --box6-color: rgba(231, 111, 81, 0.90);
+    --color-linearkaki: linear-gradient(353deg, #b49a69 10%, #d6c19b 28%, #f9ebd1 69%, #fff 100%);
     --width-container: 1500px;
     --card-height: 310px;
     --card-width: 440px;
     --card-menu-width: 500px;
     --card-menudiv-height: 450px;
-    --card1bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/cgo1.jpg);
-    --card2bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/park.jpg);
-    --card3bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/park2.jpg);
-    --card4bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/watertap.jpg);
-    --card5bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/stanley.jpg);
-    --card6bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/glasswall.jpg);
+    --card1bg: url(static/images/card/cgo1.jpg);
+    --card2bg: url(static/images/card/park.jpg);
+    --card3bg: url(static/images/card/park2.jpg);
+    --card4bg: url(../images/card/watertap.jpg);
+    --card5bg: url(../images/card/stanley.jpg);
+    --card6bg: url(../images/card/glasswall.jpg);
 }
 
 .menubar {
@@ -42,11 +44,15 @@
 }
 
 .menubar h2 {
-    display: inline;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    transform: translateY(-10%);
 }
 
 .menubar img {
     height: 35px;
+    margin-top: 5px;
 }
 
 .card1 .card__background {
@@ -108,6 +114,33 @@ html {
     font-size: 14px;
 }
 
+#bgselector {
+    float: left;
+    display: inline;
+    background: none;
+    width: 350px;
+    height: 80px;
+}
+
+#bgselector div {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #414550;
+    display: inline-block;
+}
+
+#btnbgkaki1 {
+    background: #F9ebd1;
+}
+
+#btnbgkaki2 {
+    background: var(--color-linearkaki);
+}
+
+#btnbglightpurple {
+    background: rgb(209, 190, 209);
+}
+
 .bodybackground2 {
     background: rgb(249, 249, 249);
     background: linear-gradient(180deg, rgba(249, 249, 249, 1) 0%, rgba(239, 239, 247, 1) 23%, rgba(172, 168, 181, 1) 86%, rgba(150, 143, 164, 1) 100%);
@@ -115,6 +148,14 @@ html {
 
 .bodybackground1 {
     background: var(--htmlbackground);
+}
+
+.bodybackground3 {
+    background: var(--color-linearkaki);
+}
+
+.bodybackground4 {
+    background: #F9ebd1
 }
 
 body {
@@ -176,6 +217,7 @@ body {
     background-position: center;
     border-radius: var(--spacing-l);
     bottom: 0;
+    height: var(--card-height);
     filter: brightness(0.99) saturate(1.2) contrast(0.85) blur(1px);
     left: 0;
     position: absolute;
@@ -193,7 +235,8 @@ body {
 
 .card:hover {
     transform: scale(1.05) translateZ(0);
-    transition: filter 200ms linear, transform 200ms linear;
+    /*transition: filter 200ms linear, transform 200ms linear;*/
+    transition: all .3s ease;
 }
 
 .card-grid:hover>.card:not(:hover) .card__background {
@@ -309,7 +352,7 @@ body {
 
 .grid {
     padding: 20px 20px 100px 20px;
-    max-width: 1300px;
+    max-width: 75%;
     margin: 0 auto;
     list-style: none;
     text-align: center;
@@ -366,45 +409,6 @@ body {
     content: 'by ';
 }
 
-
-/*
-.grid figcaption a {
-    text-align: center;
-    padding: 5px 10px;
-    border-radius: 2px;
-    display: inline-block;
-    background: #ed4e6e;
-    color: #fff;
-}
-*/
-
-.cs-style-1 figcaption {
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    text-align: center;
-    backface-visibility: hidden;
-    transition: transform 0.3s, opacity 0.3s;
-}
-
-.cs-style-1 .card:hover figcaption,
-.cs-style-1 .card.cs-hover figcaption {
-    opacity: 1;
-    transform: translate(15px, 15px);
-}
-
-.cs-style-1 figcaption h3 {
-    margin-top: 70px;
-}
-
-.cs-style-1 figcaption span {
-    display: block;
-}
-
-.cs-style-1 figcaption a {
-    margin-top: 30px;
-}
-
 .cs-style-7 li:first-child {
     z-index: 6;
 }
@@ -439,16 +443,17 @@ body {
     backface-visibility: hidden;
     margin-top: -20px;
     margin-left: -30px;
-    width: var(--card-menu-width);
+    width: var(--card-width);
     -webkit-box-shadow: none;
     box-shadow: none;
-    transition: opacity .6s, height .4s, box-shadow 0.3s;
+    transition: all .3s ease-in-out;
 }
 
 .cs-style-7 .card:hover figcaption,
 .cs-style-7 .card.cs-hover figcaption {
     opacity: 1;
     height: 380px;
+    width: var(--card-menu-width);
     -webkit-box-shadow: 0px 6px 7px 3px rgba(177, 163, 181, 0.98);
     box-shadow: 0px 4px 13px 7px rgba(64, 60, 57, 1);
     /*transition: opacity .3s, height .3s, box-shadow 0.3s width .4s;*/
@@ -483,10 +488,15 @@ body {
 }
 
 .cs-style-7 .card:hover .card__background {
-    height: 200px;
-    transition: all 1ss ease-in-out;
-    transform: translateY(-40px);
+    height: 190px;
     box-shadow: 0px 4px 5px 2px rgba(59, 44, 59, 1);
+    transform: translateY(-40px);
+    transition: all .5s ease;
+}
+
+.cs-style-7 .card:hover .cardtitle {
+    transform: translateY(-30px);
+    transition: all .5s ease-in-out;
 }
 
 .menuitems {
@@ -571,20 +581,6 @@ body {
 .cs-style-7 .card:hover {
     box-shadow: none;
 }
-
-.cs-style-7 .card:hover .cardtitle {
-    transition: all .6s ease-in-out;
-    transform: translateY(-30px);
-}
-
-
-/*
-.cs-style-7 .card:hover .card--content,
-.cs-style-7 .card.cs-hover .card--content {
-    opacity: 1;
-    margin-left: -50px;
-}
-*/
 
 .no-touch .cs-style-7 .card:hover figcaption h3,
 .no-touch .cs-style-7 .card:hover figcaption span,
