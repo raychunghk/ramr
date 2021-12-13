@@ -2,16 +2,13 @@
 
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="ramr.css">
+    <link rel="stylesheet" href="./static/css/ramr.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body class='bodybackground3'>
-    <!--    <video id="videoBG" loop muted autoplay>
-    <source src="./static/images/hkfootage.mp4" type="video/mp4">
-  </video>
--->
+
     <div id='menubar' class='menubar'>
         <div id='bgselector'>Background:
             <div id='btnbgkaki1'></div>
@@ -42,163 +39,186 @@
     <section class="hero-section cs-style-7">
 
         <ul class="card-grid grid">
+            <li class='cubewrap'>
+                <div class="card cube card1" href="#" id='card_all'>
+                    <div class="overflow-hid-div titlecolor1 cardtitle">
+                        <h3 class="card__heading">All Catagories</h3>
+                    </div>
+                    <div class="card__background">
+                    </div>
+                    <div class="card__content">
 
-            <li class="card card1" href="#" id='card_all'>
-                <div class="overflow-hid-div titlecolor1 cardtitle">
-                    <h3 class="card__heading">All Catagories</h3>
+
+                        <figcaption>
+                            <bubble></bubble>
+                            <div class='menuitems' style='display:inline;float:left;'>
+                                <ul class='fa-ul'>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i>
+                                        <a href="" data-content="Community Green Stations">Community Green Stations</a>
+                                    </li>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Community Halls in Public Housing">Community Halls in Public
+                                            Housing</a>
+                                    </li>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Leased In or Out Premises">Leased In or Out Premises </a></li>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Public Transport Interchanges">Public Transport
+                                            Interchanges</a>
+                                    </li>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Village Resite and Expansion Area">Village Resite and
+                                            Expansion
+                                            Area</a>
+                                    </li>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Curtain Walls and Claddings">Curtain Walls and Claddings</a>
+                                    </li>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Fallen External Finishes">Fallen External Finishes</a>
+                                    </li>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="FEHD Toilets with Structural Brick Walls">FEHD Toilets with
+                                            Structural Brick Walls</a>
+                                    </li>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Specific Plumbing Maintenance Plan">Specific Plumbing
+                                            Maintenance
+                                            Plan</a></li>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Calligraphy Graffiti by Tsang Tsou-choi">Calligraphy Graffiti
+                                            by
+                                            Tsang Tsou-choi</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </figcaption>
+                    </div>
+
                 </div>
-                <div class="card__background">
-                </div>
-                <div class="card__content">
-
-
-                    <figcaption>
-                        <div class='menuitems' style='display:inline;float:left;'>
-                            <ul class='fa-ul'>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i>
-                                    <a href="" data-content="Community Green Stations">Community Green Stations</a>
-                                </li>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Community Halls in Public Housing">Community Halls in Public
-                                        Housing</a>
-                                </li>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Leased In or Out Premises">Leased In or Out Premises </a></li>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Public Transport Interchanges">Public Transport Interchanges</a>
-                                </li>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Village Resite and Expansion Area">Village Resite and Expansion
-                                        Area</a>
-                                </li>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Curtain Walls and Claddings">Curtain Walls and Claddings</a>
-                                </li>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Fallen External Finishes">Fallen External Finishes</a>
-                                </li>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="FEHD Toilets with Structural Brick Walls">FEHD Toilets with
-                                        Structural Brick Walls</a>
-                                </li>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Specific Plumbing Maintenance Plan">Specific Plumbing Maintenance
-                                        Plan</a></li>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Calligraphy Graffiti by Tsang Tsou-choi">Calligraphy Graffiti by
-                                        Tsang Tsou-choi</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </figcaption>
-                </div>
-
             </li>
+            <li class='cubewrap'>
+                <div class="card cube card2" id='card_assettypes'>
+                    <div class="overflow-hid-div titlecolor2  cardtitle">
+                        <h3 class="card__heading">Asset Types</h3>
+                    </div>
+                    <div class="card__background">
+                    </div>
+                    <div class="card__content">
+                        <figcaption>
+                            <bubble></bubble>
+                            <div class='menuitems'>
+                                <ul class='fa-ul'>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Community Green Stations">Community Green Stations</a></li>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Community Halls in Public Housing">Community Halls in Public
+                                            Housing</a>
+                                    </li>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Leased In or Out Premises">Leased In or Out Premises </a></li>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Public Transport Interchanges">Public Transport
+                                            Interchanges</a>
+                                    </li>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Village Resite and Expansion Area">Village Resite and
+                                            Expansion
+                                            Area</a>
+                                    </li>
+                                </ul>
 
 
-            <li class="card card2" id='card_assettypes'>
-                <div class="overflow-hid-div titlecolor2  cardtitle">
-                    <h3 class="card__heading">Asset Types</h3>
+                            </div>
+                        </figcaption>
+
+                    </div>
+
                 </div>
-                <div class="card__background">
-                </div>
-                <div class="card__content">
-                    <figcaption>
-                        <div class='menuitems'>
-                            <ul class='fa-ul'>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Community Green Stations">Community Green Stations</a></li>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Community Halls in Public Housing">Community Halls in Public
-                                        Housing</a>
-                                </li>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Leased In or Out Premises">Leased In or Out Premises </a></li>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Public Transport Interchanges">Public Transport Interchanges</a>
-                                </li>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Village Resite and Expansion Area">Village Resite and Expansion
-                                        Area</a>
-                                </li>
-                            </ul>
-
-
-                        </div>
-                    </figcaption>
-
-                </div>
-
             </li>
-            <li class="card card3" id='card_bldg_comp'>
-                <div class="overflow-hid-div titlecolor3  cardtitle">
-                    <h3 class="card__heading">Building Components</h3>
-                </div>
-                <div class="card__background">
-                </div>
-                <div class="card__content">
-                    <figcaption>
-                        <div class='menuitems'>
-                            <ul class='fa-ul'>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Curtain Walls and Claddings">Curtain Walls and Claddings</a></li>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Fallen External Finishes ">Fallen External Finishes </a>
-                                </li>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="FEHD Toilets with Structural Brick Walls">FEHD Toilets with
-                                        Structural Brick Walls
-                                    </a></li>
+            <li class='cubewrap'>
+                <div class="card cube card3" id='card_bldg_comp'>
+                    <div class="overflow-hid-div titlecolor3  cardtitle">
+                        <h3 class="card__heading">Building Components</h3>
+                    </div>
+                    <div class="card__background">
+                    </div>
+                    <div class="card__content">
+                        <figcaption>
+                            <bubble></bubble>
+                            <div class='menuitems'>
+                                <ul class='fa-ul'>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Curtain Walls and Claddings">Curtain Walls and Claddings</a>
+                                    </li>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Fallen External Finishes ">Fallen External Finishes </a>
+                                    </li>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="FEHD Toilets with Structural Brick Walls">FEHD Toilets with
+                                            Structural Brick Walls
+                                        </a></li>
 
-                            </ul>
-                        </div>
-                    </figcaption>
+                                </ul>
+                            </div>
+                        </figcaption>
+
+                    </div>
 
                 </div>
-
             </li>
-            <li class="card card4" id='card_smp'>
-                <div class="overflow-hid-div titlecolor4  cardtitle">
-                    <h3 class="card__heading">Specific Maintenance Plans</h3>
-                </div>
-                <div class="card__background">
-                </div>
-                <div class="card__content">
-                    <figcaption>
-                        <div class='menuitems'>
-                            <ul class='fa-ul'>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Specific Plumbing Maintenance Plan">Specific Plumbing Maintenance
-                                        Plan</a></li>
+            <li class='cubewrap'>
+                <div class="card cube card4" id='card_smp'>
+                    <div class="overflow-hid-div titlecolor4  cardtitle">
+                        <h3 class="card__heading">Specific Maintenance Plans</h3>
+                    </div>
+                    <div class="card__background">
+                    </div>
+                    <div class="card__content">
+                        <figcaption>
+                            <bubble></bubble>
+                            <div class='menuitems'>
+                                <ul class='fa-ul'>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Specific Plumbing Maintenance Plan">Specific Plumbing
+                                            Maintenance
+                                            Plan</a></li>
 
-                            </ul>
-                        </div>
-                    </figcaption>
+                                </ul>
+                            </div>
+                        </figcaption>
+
+                    </div>
 
                 </div>
-
             </li>
-            <li class="card card5" id='card_specialfeatures'>
-                <div class="overflow-hid-div titlecolor5  cardtitle ">
-                    <h3 class="card__heading">Special Features</h3>
-                </div>
-                <div class="card__background">
-                </div>
-                <div class="card__content">
+            <li class='cubewrap'>
+                <div class="card cube card5" id='card_specialfeatures'>
+                    <div class="overflow-hid-div titlecolor5  cardtitle ">
+                        <h3 class="card__heading">Special Features</h3>
+                    </div>
+                    <div class="card__background">
+                    </div>
+                    <div class="card__content">
 
-                    <figcaption>
-                        <div class='menuitems'>
-                            <ul class='fa-ul'>
-                                <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Calligraphy Graffiti by Tsang Tsou-choi ">Calligraphy Graffiti by
-                                        Tsang Tsou-choi </a>
-                                </li>
+                        <figcaption>
+                            <bubble></bubble>
+                            <div class='menuitems'>
+                                <ul class='fa-ul'>
+                                    <li class='fa-li'><i class="fa fa-map" aria-hidden="true"></i><a href="" data-content="Calligraphy Graffiti by Tsang Tsou-choi ">Calligraphy Graffiti
+                                            by
+                                            Tsang Tsou-choi </a>
+                                    </li>
 
-                            </ul>
-                        </div>
-                    </figcaption>
+                                </ul>
+                            </div>
+                        </figcaption>
+                    </div>
+
                 </div>
-
             </li>
-            <li class="card card6" id='card_specialfeature2'>
-                <div class="overflow-hid-div titlecolor6  cardtitle">
-                    <h3 class="card__heading">Restricted</h3>
+            <li class='cubewrap'>
+                <div class="card cube card6" id='card_specialfeature2'>
+                    <div class="overflow-hid-div titlecolor6  cardtitle">
+                        <h3 class="card__heading">Restricted</h3>
+                    </div>
+                    <div class="card__background">
+                    </div>
+                    <div class="card__content">
+                        <figcaption>
+                            <div class='menuitems'>
+                                <ul class='fa-ul'>
+
+
+                                </ul>
+                            </div>
+                        </figcaption>
+
+                    </div>
+
                 </div>
-                <div class="card__background">
-                </div>
-                <div class="card__content">
-                    <figcaption>
-                        <div class='menuitems'>
-                            <ul class='fa-ul'>
-
-
-                            </ul>
-                        </div>
-                    </figcaption>
-
-                </div>
-
             </li>
             <ul>
     </section>
