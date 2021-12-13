@@ -1,6 +1,6 @@
 :root {
     /*https://raw.githubusercontent.com/raychunghk/ramr/main/static*/
-    --htmlbackground: url('../images/card/hkcentralblur5.jpg') no-repeat center center fixed;
+    --htmlbackground: url('https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/hkcentralblur5.jpg') no-repeat center center fixed;
     --background-dark: #2d3548;
     --text-light: rgba(255, 255, 255, 0.6);
     --text-lighter: rgba(255, 255, 255, 0.9);
@@ -39,7 +39,7 @@
     --card4bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/watertap.jpg);
     --card5bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/stanley.jpg);
     --card6bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/glasswall.jpg);
-    --urlmenubg1: url(../images/gplaypattern.png) repeat;
+    --urlmenubg1: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/gplaypattern.png) repeat;
 }
 
 .menubar {
@@ -169,7 +169,7 @@ html {
 
 .bodybackground4 {
     /*   background: #F9ebd1, url(../images/gplaypattern.png) repeat;*/
-    background: linear-gradient( 180deg, rgb(255 216 143 / 29%) 0%, rgb(255 216 143 / 20%) 100%), url(../images/white_tiles.png) repeat;
+    background: linear-gradient( 180deg, rgb(255 216 143 / 29%) 0%, rgb(255 216 143 / 20%) 100%), url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/white_tiles.png) repeat;
 }
 
 .bodybackground5 {
