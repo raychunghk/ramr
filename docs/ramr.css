@@ -286,7 +286,7 @@ body {
     overflow: hidden;
     overflow-y: auto;
     padding: 5px;
-    max-height: calc( var(--card-height)*1.5 +var(--spacing-xxl));
+    max-height: calc( var(--card-height)*1.6);
 }
 
 .card__content {
