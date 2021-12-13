@@ -1,36 +1,36 @@
 :root {
     /*https://raw.githubusercontent.com/raychunghk/ramr/main/static*/
-    --htmlbackground: url('https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/hkcentralblur5.jpg') no-repeat center center fixed;
+    --htmlbackground: url('../images/card/hkcentralblur5.jpg') no-repeat center center fixed;
     --background-dark: #2d3548;
     --text-light: rgba(255, 255, 255, 0.6);
     --text-lighter: rgba(255, 255, 255, 0.9);
+    --cardhover-bgheight: calc( var(--card-width)* .34);
+    --menuitem-topmargin: calc( var(--card-width)* .3);
     --spacing-s: 8px;
     --spacing-m: 16px;
     --spacing-l: 24px;
     --spacing-xl: 32px;
     --spacing-xxl: 64px;
     --xbox1-color: rgba(230, 125, 64, 0.90);
-    --card1-color: linear-gradient(319deg, rgba(180, 63, 4, 0.94) 0%, rgba(255, 153, 0, 0.84) 20%, rgba(255, 153, 0, 0.85) 66%, #ffd68e 100%);
+    --card1-color: linear-gradient(319deg, rgba(201, 83, 24, 0.94) 0%, rgba(255, 153, 0, 0.84) 20%, rgba(255, 153, 0, 0.85) 66%, #ffd68e 100%);
     --card2-color: linear-gradient(305deg, #4851ba 0%, rgba(0, 102, 255, 0.85) 19%, rgba(0, 102, 255, 0.85) 80%, rgba(152, 192, 251, 1) 100%);
-    --card3-color: linear-gradient(305deg, rgba(107, 199, 8, 0.94) 0%, rgba(146, 208, 80, 0.96) 20%, rgba(146, 208, 80, 0.95) 66%, rgba(182, 224, 137, 1) 100%);
+    /*--card3-color: linear-gradient(305deg, rgba(107, 199, 8, 0.94) 0%, rgba(146, 208, 80, 0.96) 20%, rgba(146, 208, 80, 0.95) 66%, rgba(182, 224, 137, 1) 100%);
+    */
+    --card3-color: linear-gradient(305deg, rgb(131 241 14 / 94%) 0%, rgb(152 231 68 / 96%) 20%, rgba(146, 208, 80, 0.95) 66%, rgb(199 231 165) 100%);
     --card4-color: linear-gradient(305deg, rgba(158, 60, 207, 1) 0%, rgba(204, 102, 255, 0.95) 34%, rgba(204, 109, 251, 0.96) 80%, rgba(204, 157, 227, 0.94) 100%);
-    --card5-color: linear-gradient(305deg, rgba(255, 213, 0, 1) 0%, rgba(255, 230, 0, 0.95) 34%, rgba(255, 234, 0, 0.96) 80%, rgba(255, 255, 156, 0.94) 100%);
+    --card5-color: linear-gradient(305deg, rgb(223, 172, 6) 0%, rgba(255, 230, 0, 0.95) 34%, rgba(255, 234, 0, 0.96) 80%, rgba(231, 218, 103, 0.94) 100%);
     --card6-color: linear-gradient(305deg, rgba(168, 74, 12, 1) 0%, rgba(197, 89, 17, 0.95) 34%, rgba(204, 108, 45, 0.96) 80%, rgba(235, 158, 106, 0.94) 100%);
-    --xbox2-color: rgba(42, 157, 143, 0.90);
-    --xbox3-color: rgba(38, 70, 83, 0.90);
-    --xbox4-color: rgba(233, 196, 106, 0.90);
-    --xbox5-color: rgba(244, 162, 97, 0.90);
-    --xbox6-color: rgba(231, 111, 81, 0.90);
     --color-linearkaki: linear-gradient(353deg, #b49a69 10%, #d6c19b 28%, #f9ebd1 69%, #fff 100%);
-    --color-card1figcaption: linear-gradient(to bottom, rgba(252, 232, 199, .6) 0%, rgba(250, 208, 150, 0.3) 20%, rgba(239, 204, 153, 0.3) 95%, rgba(124, 94, 80, 0.7) 100%);
-    --color-card2figcaption: linear-gradient(to bottom, rgba(192, 217, 252, .6) 0%, rgba(200, 220, 250, 0.3) 20%, rgba(164, 194, 236, 0.3) 95%, rgba(89, 93, 134, 0.6) 100%);
-    --color-card3figcaption: linear-gradient(to bottom, rgba(235, 250, 218, .6) 0%, rgba(203, 250, 153, 0.3) 20%, rgba(203, 247, 156, 0.3) 95%, rgba(135, 160, 108, 0.6) 100%);
-    --color-card4figcaption: linear-gradient(to bottom, rgba(236, 218, 245, .6) 0%, rgba(220, 169, 245, 0.3) 20%, rgba(226, 177, 250, 0.3) 66%, rgba(149, 115, 166, 0.6) 100%);
-    --color-card5figcaption: linear-gradient(to bottom, rgba(255, 255, 156, 0.6) 0%, rgba(223, 212, 90, 0.3) 20%, rgba(216, 202, 81, 0.3) 95%, rgba(129, 101, 41, 0.637) 100%);
-    --color-card6figcaption: linear-gradient(to bottom, rgba(247, 213, 190, 0.6) 0%, rgba(197, 89, 17, 0.3) 20%, rgba(197, 89, 17, 0.3) 95%, rgba(168, 89, 36, 0.64) 100%);
+    --color-gradientyellowbg: linear-gradient(315deg, rgba(241, 226, 197, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    --color-card1figcaption: linear-gradient(to bottom, rgba(252, 232, 199, .6) 0%, rgba(250, 208, 150, 0.3) 20%, rgba(239, 204, 153, 0.3) 75%, rgba(223, 187, 121, 0.5) 100%);
+    --color-card2figcaption: linear-gradient(to bottom, rgba(192, 217, 252, .6) 0%, rgba(200, 220, 250, 0.3) 20%, rgba(164, 194, 236, 0.3) 75%, rgba(120, 124, 165, 0.5) 100%);
+    --color-card3figcaption: linear-gradient(to bottom, rgba(235, 250, 218, .6) 0%, rgba(203, 250, 153, 0.3) 20%, rgba(203, 247, 156, 0.3) 75%, rgba(155, 180, 129, 0.5) 100%);
+    --color-card4figcaption: linear-gradient(to bottom, rgba(236, 218, 245, .6) 0%, rgba(220, 169, 245, 0.3) 20%, rgba(226, 177, 250, 0.3) 66%, rgba(176, 144, 192, 0.6) 100%);
+    --color-card5figcaption: linear-gradient(to bottom, rgba(255, 255, 156, 0.6) 0%, rgba(223, 212, 90, 0.3) 20%, rgba(216, 202, 81, 0.3) 75%, rgba(190, 159, 92, 0.5) 100%);
+    --color-card6figcaption: linear-gradient(to bottom, rgba(247, 213, 190, 0.6) 0%, rgba(197, 89, 17, 0.3) 20%, rgba(197, 89, 17, 0.3) 75%, rgba(201, 119, 64, 0.5) 100%);
     --width-container: 1500px;
-    --card-height: calc( var(--card-width)* .72);
-    --card-width: 380px;
+    --card-width: 550px;
+    --card-height: calc( var(--card-width)* .5);
     --card-menu-width: calc(var(--card-width) + 60px);
     --card-menudiv-height: 450px;
     --card1bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/cgo1.jpg);
@@ -39,7 +39,7 @@
     --card4bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/watertap.jpg);
     --card5bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/stanley.jpg);
     --card6bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/glasswall.jpg);
-    --urlmenubg1: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/gplaypattern.png) repeat;
+    --urlmenubg1: url(../images/gplaypattern.png) repeat;
 }
 
 .menubar {
@@ -164,12 +164,12 @@ html {
 }
 
 .bodybackground3 {
-    background: var(--color-linearkaki);
+    background: var(--color-gradientyellowbg);
 }
 
 .bodybackground4 {
     /*   background: #F9ebd1, url(../images/gplaypattern.png) repeat;*/
-    background: linear-gradient( 180deg, rgb(255 216 143 / 29%) 0%, rgb(255 216 143 / 20%) 100%), url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/white_tiles.png) repeat;
+    background: linear-gradient( 180deg, rgb(255 216 143 / 29%) 0%, rgb(255 216 143 / 20%) 100%), url(../images/white_tiles.png) repeat;
 }
 
 .bodybackground5 {
@@ -203,8 +203,8 @@ body {
     grid-template-columns: repeat(1, 1fr);
     grid-column-gap: var(--spacing-xxl);
     grid-row-gap: var(--spacing-xxl);
-    max-width: var(--width-container);
-    width: 100%;
+    /*max-width: var(--width-container);*/
+    width: calc(100%-20px);
 }
 
 @media(min-width: 540px) {
@@ -223,8 +223,10 @@ body {
 .card {
     list-style: none;
     position: relative;
-    box-shadow: 0px 3px 14px 0px rgba(34, 32, 37, 0.87);
-    border-radius: var(--spacing-l);
+    /*box-shadow: 0px 3px 14px 0px rgba(34, 32, 37, 0.87);*/
+    /*box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;*/
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: var(--spacing-s);
 }
 
 .card:before {
@@ -236,10 +238,10 @@ body {
 .card__background {
     background-size: cover !important;
     background-position: center;
-    border-radius: var(--spacing-l);
+    border-radius: var(--spacing-s);
     bottom: 0;
     height: var(--card-height);
-    filter: brightness(0.99) saturate(1.2) contrast(0.85) blur(1px);
+    filter: brightness(0.5) saturate(1.2) grayscale(34%) sepia(23%) invert(.2) contrast(81%);
     left: 0;
     position: absolute;
     right: 0;
@@ -251,7 +253,7 @@ body {
 }
 
 .card:hover .card__background {
-    filter: brightness(1) saturate(1) contrast(1);
+    filter: brightness(1.2) saturate(1.4) contrast(1);
 }
 
 .card:hover {
@@ -260,8 +262,10 @@ body {
     transition: all .3s ease;
 }
 
-.card-grid:hover>.card:not(:hover) .card__background {
-    filter: brightness(75%) saturate(0.3) contrast(1.2) blur(8px);
+.card-grid:hover>.card:not(:hover) .card__background,
+.card-grid:hover>.card:not(:hover) .cardtitle {
+    filter: brightness(75%) saturate(0.3) contrast(1.2) blur(3px);
+    transition: all .3s ease;
 }
 
 .card__content {
@@ -280,10 +284,10 @@ body {
 
 .card__heading {
     color: var(--text-lighter);
-    font-size: 1.9rem;
+    font-size: 2.1rem;
     line-height: 1.4;
     z-index: 10;
-    text-shadow: 0 0 5px rgb(29, 20, 28), #544747 2px 2px 0;
+    text-shadow: 0 0 5px rgb(63, 48, 61), #6b6363 2px 2px 0;
 }
 
 @keyframes anibackgroundload {
@@ -297,55 +301,78 @@ body {
 
 .cardtitle {
     overflow: hidden;
-    margin-left: -60px;
-    width: 400px;
+    margin-left: -50px;
+    width: calc(var(--card-width)*.9);
     padding: 5px 5px 5px 20px;
-    height: 45px;
-    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    height: 55px;
+    /*box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);*/
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     z-index: 10;
-    border-radius: 6px;
+    border-radius: var(--spacing-s);
+    /*
+    transform: perspective(500px) scale(1.4) translateY(50px) translateX(20px) rotateY(10deg) skewX(5deg)skewY(5deg);
+    */
+    transform: perspective(500px) scale(1.2);
+    margin-top: calc(var(--card-height)*0.2);
     position: relative;
 }
 
+.card bubble {
+    position: absolute;
+    z-index: -99;
+    top: -50%;
+    left: 42%;
+    width: 4em;
+    height: 4em;
+    border-radius: 0 0 4em 0;
+    transition: all 0.5s ease;
+    mix-blend-mode: hard-light;
+}
+
+.card:hover bubble {
+    transform: scale(23);
+    transition: .6s ease-in-out;
+    filter: opacity(45%);
+}
+
 .titlecolor1,
-.card1 .menuitems li:hover {
+.card1 .menuitems li:hover,
+.card1 bubble {
     background: var(--card1-color);
 }
 
 .titlecolor2,
-.card2 .menuitems li:hover {
+.card2 .menuitems li:hover,
+.card2 bubble {
     background: var(--card2-color);
 }
 
 .titlecolor3,
-.card3 .menuitems li:hover {
+.card3 .menuitems li:hover,
+.card3 bubble {
     background: var(--card3-color);
 }
 
 .titlecolor4,
-.card4 .menuitems li:hover {
+.card4 .menuitems li:hover,
+.card4 bubble {
     background: var(--card4-color);
 }
 
 .titlecolor5,
-.card5 .menuitems li:hover {
+.card5 .menuitems li:hover,
+.card5 bubble {
     background: var(--card5-color);
 }
 
 .titlecolor6,
-.card6 .menuitems li:hover {
+.card6 .menuitems li:hover,
+.card6 bubble {
     background: var(--card6-color);
 }
 
 
 /*video background*/
-
-#videoBG {
-    position: fixed;
-    z-index: -1;
-    filter: brightness(1.2) blur(1px);
-    top: 0px;
-}
 
 @media (min-aspect-ratio: 16/9) {
     #videoBG {
@@ -362,30 +389,34 @@ body {
 }
 
 @media (max-width: 767px) {
-    #videoBG {
-        display: none;
-    }
     body {
-        background: url('poster.jpg');
         background-size: cover;
     }
 }
 
 .grid {
     padding: 20px 20px 5px 20px;
-    max-width: 75%;
+    max-width: 95%;
     margin: 0 auto;
     list-style: none;
     text-align: center;
 }
 
-.grid li.card {
+.grid .card {
     display: inline-block;
     width: var(--card-width);
+    height: var(--card-height);
     margin: 0;
     padding: 20px;
     text-align: left;
     position: relative;
+}
+
+.cubewrapx {}
+
+.cube {
+    perspective-origin: top left;
+    transform: perspective(500px) scale3d(.9, .9, .9) rotateX(2deg) rotateY(-2deg) translate3d(0px, 0px, 0px) skew(0deg, 0deg);
 }
 
 .grid figcaption {
@@ -394,6 +425,7 @@ body {
     left: 0;
     padding: 20px;
     color: #1a1722;
+    overflow: hidden;
 }
 
 .card1 figcaption {
@@ -425,10 +457,6 @@ body {
     margin: 0;
     padding: 0;
     color: #fff;
-}
-
-.grid figcaption span:before {
-    content: 'by ';
 }
 
 .cs-style-7 li:first-child {
@@ -476,8 +504,8 @@ body {
     opacity: 1;
     height: 380px;
     width: var(--card-menu-width);
-    -webkit-box-shadow: 0px 6px 7px 3px rgba(177, 163, 181, 0.98);
-    box-shadow: 0px 4px 13px 7px rgba(64, 60, 57, 1);
+    /*box-shadow: 0px 4px 13px 7px rgba(64, 60, 57, 1);*/
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset, rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     /*transition: opacity .3s, height .3s, box-shadow 0.3s width .4s;*/
     transition: all .3s ease-in-out;
 }
@@ -519,20 +547,21 @@ body {
 }
 
 .cs-style-7 .card:hover .card__background {
-    height: 190px;
-    box-shadow: 0px 4px 5px 2px rgba(59, 44, 59, 1);
+    height: var(--cardhover-bgheight);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     transform: translateY(-40px);
     transition: all .5s ease;
 }
 
 .cs-style-7 .card:hover .cardtitle {
-    transform: translateY(-30px);
+    transform: translateY(calc(var(--card-height)*0.25*-1));
+    width: 100%;
     transition: all .5s ease-in-out;
 }
 
 .menuitems {
     margin-left: 20px;
-    margin-top: 42%;
+    margin-top: var(--menuitem-topmargin);
 }
 
 .menuitems a {
@@ -606,7 +635,7 @@ body {
 
 .menuitems li:hover a {
     color: white;
-    text-shadow: 0 0 5px rgb(29, 20, 28), 3px 3px 4px rgba(105, 112, 108, 1);
+    text-shadow: 0 0 5px rgb(71, 57, 70), 3px 3px 4px rgb(63, 60, 78);
 }
 
 .cs-style-7 .card:hover {
