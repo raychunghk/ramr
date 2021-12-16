@@ -49,6 +49,7 @@
     --h2border: 2px;
     --h2borderb: -2px;
     --h2bordercolor: #5d5e60;
+    --h2bordercolorb: #575d69;
 }
 
 nav.main-header h2 {
@@ -77,6 +78,11 @@ nav.main-header h2 {
 
 .hero-section * {
     font-family: sans-serif !important;
+}
+
+.asdsection {
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .menubar h2 {
@@ -144,13 +150,11 @@ nav.main-header h2 {
     }
 }
 
-
-/*
 html {
     height: 100%;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-}*/
+}
 
 #bgselector {
     float: left;
@@ -273,9 +277,23 @@ body {
     /* this code makes the row stretch to entire width of the container */
 }
 
-@media only screen and (min-device-height: 360px) and (min-device-width: 760px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 4) {
+@media (min-aspect-ratio: 16/9) {}
+
+@media (max-aspect-ratio: 16/9) {}
+
+@media (max-width: 767px) {}
+
+@media only screen and (min-device-height: 760px) and (min-device-width:350px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 4) {
+    body {
+        overflow-x: auto;
+        overflow-y: scroll;
+    }
+    .asdsection {
+        max-height: 100vh;
+        overflow-y: scroll;
+    }
     .asdsection .card-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         width: 98%;
     }
     .asdsection .grid .asdcard {
@@ -294,12 +312,21 @@ body {
         font-size: 14px;
         /* .9vw*/
     }
+    nav.main-header h2 {
+        color: rgb(155, 137, 137);
+        /*-webkit-text-stroke-width: 1.4px;
+        -webkit-text-stroke-color: #212121;
+        -webkit-text-fill-color: #ffffff;
+        text-shadow: none;*/
+        font-size: 2.2em;
+        text-shadow: var(--h2bordercolorb) 2px 0px 0px, var(--h2bordercolorb) 1.75517px 0.958851px 0px, var(--h2bordercolorb) 1.0806px 1.68294px 0px, var(--h2bordercolorb) 0.141474px 1.99499px 0px, var(--h2bordercolorb) -0.832294px 1.81859px 0px, var(--h2bordercolorb) -1.60229px 1.19694px 0px, var(--h2bordercolorb) -1.97998px 0.28224px 0px, var(--h2bordercolorb) -1.87291px -0.701566px 0px, var(--h2bordercolor) -1.30729px -1.5136px 0px, var(--h2bordercolor) -0.421592px -1.95506px 0px, var(--h2bordercolor) 0.567324px -1.91785px 0px, var(--h2bordercolor) 1.41734px -1.41108px 0px, var(--h2bordercolor) 1.92034px -0.558831px 0px, #4e4a4ad1 0px 0px 5px
+    }
 }
 
 @media(min-width: 960px) {
     .asdsection .card-grid {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: var(--card-height) 1px var(--card-height);
+        grid-template-rows: repeat(var(--card-height) 1px);
     }
 }
 
@@ -373,10 +400,18 @@ body {
     /* bring your own prefixes */
 }
 
-.card-grid:hover .asdcard:not(:hover) .asdcard__background,
-.card-grid:hover .asdcard:not(:hover) .cardtitle {
+.card-grid:hover li:not(:hover) .asdcard__background {
     filter: brightness(75%) saturate(0.3) contrast(1.2) blur(2px);
     transition: all .3s ease-in-out;
+}
+
+.card-grid:hover li:not(:hover) .cardtitle {
+    filter: brightness(75%) saturate(0.3) contrast(1.2);
+    transition: all .3s ease-in-out;
+}
+
+.card-grid:hover li:not(:hover) {
+    z-index: 1;
 }
 
 .asdsection .asdcard .menuitems {
@@ -402,7 +437,7 @@ body {
 
 .asdsection .asdcard__heading {
     color: var(--text-lighter);
-    font-size: 1.3vw;
+    font-size: 1.3em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 1.6;
     font-weight: bold;
@@ -509,29 +544,6 @@ body {
 .card6 .menuitems li:hover,
 .asdsection .card6 bubble {
     background: var(--card6-color);
-}
-
-
-/*video background*/
-
-@media (min-aspect-ratio: 16/9) {
-    #videoBG {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-aspect-ratio: 16/9) {
-    #videoBG {
-        width: auto;
-        height: 100%;
-    }
-}
-
-@media (max-width: 767px) {
-    body {
-        background-size: cover;
-    }
 }
 
 .asdsection .grid .asdcard {
