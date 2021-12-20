@@ -11,6 +11,9 @@
     --spacing-l: 24px;
     --spacing-xl: 32px;
     --spacing-xxl: 64px;
+    --header-height: 66.5px;
+    --buttonbar-height: 102px;
+    --asdsection-height: calc(100vh - var(--buttonbar-height) - var(--header-height));
     --cardbgfilter: saturate(.8) grayscale(70%) sepia(5%) invert(0) contrast(100%);
     --spacing-xxxl: 80px;
     --xbox1-color: rgba(230, 125, 64, 0.90);
@@ -192,7 +195,15 @@ html {
 }
 
 .bodybackgroundwongsir {
-    background: var(--color-gradientyellowbg), url(https://raw.githubusercontent.com/raychunghk/ramr/main/docs/static/images/sketch01.svg);
+    background: var(--color-gradientyellowbg)
+}
+
+.asdstyle2 .bodybackgroundwongsir {
+    background: linear-gradient(315deg, #dbb064c2 0%, #efce8fbf 19%, #ebd099bf 22%, #ffffff 100%), url(https://raw.githubusercontent.com/raychunghk/ramr/main/docs/static/images/sketch01.svg);
+}
+
+.asdstyle2 .main-header {
+    background: #ff9f50ab !important;
 }
 
 .bodybackground4 {
@@ -219,7 +230,7 @@ body {
 .asdsection {
     align-items: flex-start;
     display: flex;
-    height: calc(100vh - 63px - 70px) !important;
+    height: calc(100vh - 66px - 70px) !important;
     justify-content: center;
     overflow-y: auto;
     padding: var(--spacing-xl) var(--spacing-l);
@@ -245,7 +256,6 @@ body {
     list-style: none;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
     grid-column-gap: var(--spacing-xxl);
     grid-row-gap: var(--spacing-xxl);
     /*max-width: var(--width-container);*/
@@ -294,7 +304,7 @@ body {
     list-style: none;
 }
 
-.asdsection .grid .asdcard {
+.asdsection .asdcard {
     display: inline-block;
     width: var(--card-width);
     height: var(--card-height);
@@ -352,7 +362,6 @@ box-shadow: inset 0 0 15px rgba(55, 82, 170, 0), inset 0 0 8px rgba(255, 255, 25
     border-radius: var(--spacing-s);
     bottom: 0;
     height: var(--card-height);
-    /*filter: brightness(0.5) saturate(1.2) grayscale(34%) sepia(23%) invert(.2) contrast(81%);*/
     filter: var(--cardbgfilter);
     left: 0;
     position: absolute;
@@ -407,7 +416,6 @@ box-shadow: inset 0 0 15px rgba(55, 82, 170, 0), inset 0 0 8px rgba(255, 255, 25
     font-weight: bold;
     align-self: flex-end;
     z-index: 10;
-    /*text-shadow: 0 0 5px rgb(63, 48, 61), #6b6363 2px 2px 0;*/
     transition: margin-left 0.3s cubic-bezier(0, 1, 0, 1);
     /*text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);*/
     background-clip: text;
@@ -429,7 +437,6 @@ box-shadow: inset 0 0 15px rgba(55, 82, 170, 0), inset 0 0 8px rgba(255, 255, 25
     width: calc(var(--card-width)*.9);
     padding: 8px 5px 2px 20px;
     height: 55px;
-    /*box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);*/
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     z-index: 10;
     border-radius: var(--spacing-s);
@@ -525,35 +532,52 @@ transform: perspective(500px) scale(1.4) translateY(50px) translateX(20px) rotat
     transition: all 2s ease-in-out;*/
 }
 
-
-/*
-.cube:hover {
-transform: rotateX( 0deg) rotateY( 0deg);
-}*/
-
 .asdsection .card1 figcaption {
-    /*rgb(216, 200, 191),*/
-    background: var(--color-card1figcaption), var(--urlmenubg1)
+    background: var(--color-card1figcaption), white;
 }
 
 .asdsection .card2 figcaption {
-    background: var(--color-card2figcaption), var(--urlmenubg1)
+    background: var(--color-card2figcaption), white;
 }
 
 .asdsection .card3 figcaption {
-    background: var(--color-card3figcaption), var(--urlmenubg1)
+    background: var(--color-card3figcaption), white;
 }
 
 .asdsection .card4 figcaption {
-    background: var(--color-card4figcaption), var(--urlmenubg1)
+    background: var(--color-card4figcaption), white;
 }
 
 .asdsection .card5 figcaption {
-    background: var(--color-card5figcaption), var(--urlmenubg1)
+    background: var(--color-card5figcaption), white;
 }
 
 .asdsection .card6 figcaption {
-    background: var(--color-card6figcaption), var(--urlmenubg1)
+    background: var(--color-card6figcaption), white;
+}
+
+.asdstyle2 .card1 figcaption {
+    background: var(--color-card1figcaption), var(--urlmenubg1) !important
+}
+
+.asdstyle2 .card2 figcaption {
+    background: var(--color-card2figcaption), var(--urlmenubg1)!important
+}
+
+.asdstyle2 .card3 figcaption {
+    background: var(--color-card3figcaption), var(--urlmenubg1)!important
+}
+
+.asdstyle2 .card4 figcaption {
+    background: var(--color-card4figcaption), var(--urlmenubg1)!important
+}
+
+.asdstyle2 .card5 figcaption {
+    background: var(--color-card5figcaption), var(--urlmenubg1)!important
+}
+
+.asdstyle2 .card6 figcaption {
+    background: var(--color-card6figcaption), var(--urlmenubg1)!important
 }
 
 .asdsection figcaption h3 {
@@ -563,27 +587,27 @@ transform: rotateX( 0deg) rotateY( 0deg);
 }
 
 .asdsection li:first-child {
-    z-index: 6;
+    z-index: 1000;
 }
 
 .asdsection li:nth-child(2) {
-    z-index: 5;
+    z-index: 999;
 }
 
 .asdsection li:nth-child(3) {
-    z-index: 4;
+    z-index: 998;
 }
 
 .asdsection li:nth-child(4) {
-    z-index: 3;
+    z-index: 997;
 }
 
 .asdsection li:nth-child(5) {
-    z-index: 2;
+    z-index: 996;
 }
 
 .asdsection li:nth-child(6) {
-    z-index: 1;
+    z-index: 995;
 }
 
 .asdsection figcaption {
@@ -631,8 +655,6 @@ transform: rotateX( 0deg) rotateY( 0deg);
     overflow-x: hidden;
     width: var(--card-menu-width);
     transform: translateY(-28px);
-    /*box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset, rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-*/
     box-shadow: rgb(50 50 93 / 25%) 0px 14px 29px -20px, rgb(0 0 0 / 30%) 0px 10px 17px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset, rgb(0 0 0 / 7%) 0px 1px 2px, rgb(0 0 0 / 7%) 0px 2px 4px, rgb(0 0 0 / 7%) 0px 4px 8px, rgb(0 0 0 / 7%) 0px 8px 16px, rgb(0 0 0 / 7%) 0px 16px 32px, rgb(0 0 0 / 7%) 0px 32px 64px;
     /*transition: opacity .3s, height .3s, box-shadow 0.3s width .4s;*/
 }
@@ -656,8 +678,9 @@ transform: rotateX( 0deg) rotateY( 0deg);
 .asdsection .card1 .menuitems h4 {
     font-weight: bold;
     margin-top: 15px;
-    font-size: 1.2em;
-    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+    font-size: 1.3em;
+    color: #747474;
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 20%), 0px -2px 2px rgb(255 255 255 / 30%);
 }
 
 .asdsection .card1 .menuitems a {
@@ -804,7 +827,7 @@ transform: rotateX( 0deg) rotateY( 0deg);
         left: 0%;
     }
     100% {
-        top: 30%;
+        top: 33%;
         left: 50%;
         box-shadow: none;
         /* bring your own prefixes */
@@ -843,7 +866,6 @@ transform: rotateX( 0deg) rotateY( 0deg);
         top: 30%;
         left: 50%;
         box-shadow: none;
-        /* bring your own prefixes */
         transform: translate(-50%, -30%) scale(1.05);
         /* rotateX( 2deg) rotateY( 15deg);*/
         ;
@@ -860,14 +882,90 @@ transform: rotateX( 0deg) rotateY( 0deg);
     opacity: 1;
 }
 
+div.divtheme {
+    display: none;
+}
+
 @media(min-width: 960px) {
     .asdsection .card-grid {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(auto-fill, var(--card-height));
     }
+    .card {
+        display: grid !important;
+        grid-template-rows: auto auto;
+        height: 100%;
+    }
+    div#theme3 {
+        display: none;
+    }
+    /** theme button */
+    div.divtheme {
+        position: absolute;
+        top: 0px;
+        z-index: 10111;
+        left: 0px;
+        background: #b7c7c27d;
+        border-radius: 5px;
+        display: block;
+        height: auto;
+        padding-bottom: 8px;
+        width: 105px;
+        display: grid;
+        grid-row-gap: 5px;
+        grid-template-columns: 1fr;
+        justify-content: space-around;
+        align-items: start;
+        justify-items: center;
+    }
+    .divtheme button {
+        height: 22px;
+        width: 70px;
+        border-radius: 2px;
+        background: rgb(255, 251, 251);
+    }
+    .divtheme #theme2 div.content {
+        width: 110px;
+        position: absolute;
+        top: 10px;
+        left: 100px;
+        display: grid;
+        grid-row-gap: 5px;
+        grid-template-columns: 1fr;
+        justify-content: space-around;
+        align-items: start;
+        justify-items: center;
+        display: none;
+        height: 100px;
+        border-radius: 2px;
+        background: rgba(93, 212, 233, 0.644);
+    }
+    div.btnbox {
+        display: grid;
+        z-index: 20;
+        justify-items: center;
+    }
+    .divtheme #theme2:hover div.content {
+        float: right;
+        margin-left: 20px;
+        display: block;
+        width: 250px !important;
+        z-index: 11000;
+    }
+    .divtheme li {
+        list-style: none;
+    }
+    .bgdemo1 {
+        background: #ff9f5096 !important;
+    }
 }
 
 @media only screen and (min-width: 360px) and (max-width: 767px) {
+    .card {
+        position: relative;
+        display: flex !important;
+        flex-direction: column !important;
+    }
      :root {
         /*https://raw.githubusercontent.com/raychunghk/ramr/main/static*/
         --htmlbackground: url('https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/hkcentralblur5.jpg') no-repeat center center fixed;
@@ -904,8 +1002,8 @@ transform: rotateX( 0deg) rotateY( 0deg);
         --width-container: 750px;
         --card-width: 299px;
         --card-hoverup: -20px;
-        --card-height: calc(var(--card-width)* .5);
-        --card-menu-width: calc(var(--card-width) + 40px);
+        --card-height: calc(var(--card-width)* .4);
+        --card-menu-width: calc(var(--card-width)+40px);
         --card1-menuitemwidth: 715px;
         --card-menudiv-height: 450px;
         --animation-delay: .1s;
@@ -913,6 +1011,9 @@ transform: rotateX( 0deg) rotateY( 0deg);
         --h2borderb: -2px;
         --h2bordercolor: #5d5e60;
         --h2bordercolorb: #575d69;
+        --header-height: 66.5px;
+        --buttonbar-height: 109px;
+        --asdsection-height: calc(100vh - var(--buttonbar-height) - var(--header-height));
     }
     .grid li:hover {
         margin: 0 !important;
@@ -922,61 +1023,128 @@ transform: rotateX( 0deg) rotateY( 0deg);
         float: left;
     }
     .asdsection figcaption {
-        position: relative;
-        top: 0;
-        left: 0;
-        padding: 3px;
-        color: #000000;
-        overflow: hidden;
-        position: absolute;
-        max-height: 45vh;
-        border-radius: 5px;
-        opacity: 0;
-        z-index: 4;
-        backface-visibility: hidden;
+        pointer-events: none;
         -webkit-box-shadow: none;
+        backface-visibility: hidden;
+        border-radius: 5px;
         box-shadow: none;
-        transition: all .3s ease-in-out;
+        color: #000000;
+        left: 0;
+        height: 10px;
+        max-height: 45vh;
+        opacity: 0;
+        overflow: hidden;
+        padding: 3px;
+        position: absolute;
+        top: 0;
+        transition: all .3s ease-in-out, pointer-events 1s ease;
+        z-index: 4;
     }
     .asdsection .grid>li:hover figcaption,
     .asdsection .asdcard:hover figcaption {
         position: absolute;
+        pointer-events: auto;
         min-height: 250px;
-        height: 300px !important;
+        height: 280px !important;
         margin: 0 -30px 0 0;
         opacity: 1;
-        width: 85vw !important;
+        width: 89vw !important;
         overflow-x: hidden;
         transform: translateY(-10px);
         /*box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset, rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     */
         box-shadow: rgb(50 50 93 / 25%) 0px 14px 29px -20px, rgb(0 0 0 / 30%) 0px 10px 17px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset, rgb(0 0 0 / 7%) 0px 1px 2px, rgb(0 0 0 / 7%) 0px 2px 4px, rgb(0 0 0 / 7%) 0px 4px 8px, rgb(0 0 0 / 7%) 0px 8px 16px, rgb(0 0 0 / 7%) 0px 16px 32px, rgb(0 0 0 / 7%) 0px 32px 64px;
-        /*transition: opacity .3s, height .3s, box-shadow 0.3s width .4s;*/
     }
+    .card-grid>li:nth-child(n+4):hover figcaption,
+    .card-grid>li:nth-child(n+4) .asdcard:hover figcaption {
+        pointer-events: auto;
+        /*.fist row desktop mode :hover {*/
+        min-height: 160px !important;
+        height: auto !important;
+    }
+    .card-grid>li:hover {
+        margin: 0 !important;
+        height: 300px;
+    }
+    @keyframes kfshiftcardupmobile {
+        0% {
+            top: 0%;
+            left: 0%;
+        }
+        100% {
+            top: 100%;
+            left: 50%;
+            box-shadow: none;
+            /* bring your own prefixes */
+            transform: translate(-80%, -50%) scale(1.5);
+            /* rotateX( 2deg) rotateY( 15deg);*/
+            ;
+        }
+    }
+    .card-grid>li:last-child:hover .asdcard {
+        /*.asdcard:hover {*/
+        position: absolute !important;
+        animation: kfshiftcardupmobile 2s forwards !important;
+    }
+    .card-grid>li:last-child:hover {
+        margin-top: -30px !important;
+    }
+    .card-grid>li:nth-child(n+4):hover {
+        margin: 0 !important;
+        height: 160px !important;
+    }
+    .card-grid>li:hover .cardtitle,
     .asdsection .asdcard:hover .cardtitle {
         transform: translateY(-45px);
         height: 35px;
         width: 100%;
         transition: all .5s ease-in-out;
     }
+    .card-grid>li:hover .asdcard__background,
     .asdsection .asdcard:hover .asdcard__background {
         height: var(--cardhover-bgheight);
+        width: 89vw;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-        transform: translateY(-1px);
+        transform: translateY(-20px);
         transition: all .5s ease;
     }
     .asdsection .card-grid {
-        z-index: 30;
-        padding: 5px 20px;
-        max-width: 95%;
-        margin: 10px auto 0px auto;
-        list-style: none;
-        text-align: center;
+        /*max-width: var(--width-container);*/
         display: grid;
         grid-row-gap: 10px;
-        /*max-width: var(--width-container);*/
-        width: calc(100%-20px);
+        grid-template-columns: repeat(1, 1fr);
+        height: 100%;
+        list-style: none;
+        margin: 10px auto 0px auto;
+        max-width: 95%;
+        padding: 5px 20px;
+        position: absolute;
+        text-align: center;
         transition: all .3s ease-in-out;
+        width: calc(100%-20px);
+        z-index: 30;
+    }
+    .card-grid>li:nth-last-child(-n+2) .asdcard:hover,
+    .card-grid>li:nth-last-child(-n+2):hover .asdcard {
+        /*.asdcard:hover {*/
+        position: absolute !important;
+        animation: kfshiftcardupmobile .3s forwards !important;
+        transition: all .5s ease-in-out !important;
+    }
+    @keyframes kfshiftcardupmobile {
+        0% {
+            top: 0%;
+            left: 0%;
+        }
+        100% {
+            top: -20%;
+            left: 00%;
+            box-shadow: none;
+            /* bring your own prefixes */
+            transform: translate(0%, 1%) scale(1.07);
+            /* rotateX( 2deg) rotateY( 15deg);*/
+            ;
+        }
     }
     .card-grid>li:hover .asdcard {
         position: relative !important;
@@ -985,7 +1153,7 @@ transform: rotateX( 0deg) rotateY( 0deg);
         transform: translateY(5px) !important;
     }
     html {
-        font-size: 12px;
+        font-size: 14px;
     }
     .asdsection .card1 .menuitems ul {
         display: grid;
@@ -998,23 +1166,23 @@ transform: rotateX( 0deg) rotateY( 0deg);
         display: inline-block !important;
     }
     body {
-        overflow-x: auto;
-        overflow-y: scroll;
+        overflow: hidden;
     }
     .asdsection {
-        max-height: 100vh;
-        overflow-y: scroll;
+        height: 100%;
+        overflow: hidden;
+        max-height: var(--asdsection-height) !important
     }
     .asdsection .cardtitle {
-        overflow: hidden;
-        margin-left: -35px;
-        width: calc(var(--card-width)*.9);
-        padding: 2px 2px 2px 10px;
-        height: 50px;
         /*box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);*/
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-        z-index: 10;
         border-radius: var(--spacing-s);
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        height: 50px;
+        margin-left: -35px;
+        overflow: hidden;
+        padding: 2px 2px 2px 10px;
+        width: calc(var(--card-width)*.9);
+        z-index: 10;
         /*
     transform: perspective(500px) scale(1.4) translateY(50px) translateX(20px) rotateY(10deg) skewX(5deg)skewY(5deg);
     */
@@ -1023,10 +1191,11 @@ transform: rotateX( 0deg) rotateY( 0deg);
     }
     .asdsection .card-grid {
         grid-template-columns: repeat(1, 1fr);
-        width: 98%;
+        width: 99%;
+        height: auto !important
     }
     .hero-section {
-        padding: var(--spacing-s) var(--spacing-s);
+        padding: 0px !important;
     }
     .asdsection .card1 .menuitems a {
         font-size: .9rem;
@@ -1064,31 +1233,4 @@ transform: rotateX( 0deg) rotateY( 0deg);
         transform: translateY(-50px);
         transition: all .5s ease-in-out;
     }
-}
-
-
-/** theme button */
-
-div.divtheme {
-    position: absolute;
-    top: 0px;
-    z-index: 10;
-    left: 0px;
-    background: #aba3a3;
-    display: block;
-    height: 120px;
-    width: 120px;
-}
-
-.divtheme button {
-    height: 22px;
-    width: 70px;
-}
-
-.divtheme li {
-    list-style: none;
-}
-
-.bgdemo1 {
-    background: #ff9f5096 !important;
 }
