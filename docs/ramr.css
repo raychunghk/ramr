@@ -42,12 +42,12 @@
     --card1-menuitemwidth: 715px;
     --card-menudiv-height: 450px;
     --animation-delay: .1s;
-    --card1bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/cgo1.jpg);
-    --card2bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/park.jpg);
-    --card3bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/park2.jpg);
-    --card4bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/watertap.jpg);
-    --card5bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/stanley.jpg);
-    --card6bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/glasswall.jpg);
+    --card1bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/card1_all.jpg);
+    --card2bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/card2_assettypes.jpg);
+    --card3bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/card3_buildingcomponent.jpg);
+    --card4bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/card4_specificmp.jpg);
+    --card5bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/card5_specificfeatures.jpg);
+    --card6bg: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/card/card6_restricted.jpg);
     --urlmenubg1: url(https://raw.githubusercontent.com/raychunghk/ramr/main/static/images/gplaypattern.png) repeat;
     --h2border: 2px;
     --h2borderb: -2px;
@@ -384,6 +384,7 @@ body {
     list-style: none;
 }
 
+.asdsection .cubewrap::after,
 .asdsection .asdcard {
     display: inline-block;
     width: var(--card-width);
@@ -432,8 +433,33 @@ box-shadow: inset 0 0 15px rgba(55, 82, 170, 0), inset 0 0 8px rgba(255, 255, 25
 .asdsection .grid>li:before,
 .asdsection .asdcard:before {
     content: '';
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: inherit;
+    background: #dfdfdf;
+    height: inherit;
+    border-radius: 4px;
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    top: 2x;
+    left: -2x;
+    filter: brightness(1.9) opacity(0.4);
+    z-index: 1;
+}
+
+.asdsection .grid>li:before,
+.asdsection .asdcard:before {
+    content: '';
+    display: inline-block;
+    width: inherit;
+    background: #dfdfdf;
+    height: inherit;
+    border-radius: 3px;
+    position: absolute;
+    top: 2x;
+    left: -2x;
+    filter: opacity(.5);
+    z-index: 1;
 }
 
 .asdsection .asdcard__background {
@@ -565,36 +591,42 @@ transform: perspective(500px) scale(1.4) translateY(50px) translateX(20px) rotat
 
 .titlecolor1,
 .card1 .menuitems li:hover,
+.asdsection .card1:before,
 .asdsection .card1 bubble {
     background: var(--card1-color);
 }
 
 .titlecolor2,
 .card2 .menuitems li:hover,
+.asdsection .card2:before,
 .asdsection .card2 bubble {
     background: var(--card2-color);
 }
 
 .titlecolor3,
 .card3 .menuitems li:hover,
+.asdsection .card3:before,
 .asdsection .card3 bubble {
     background: var(--card3-color);
 }
 
 .titlecolor4,
 .card4 .menuitems li:hover,
+.asdsection .card4:before,
 .asdsection .card4 bubble {
     background: var(--card4-color);
 }
 
 .titlecolor5,
 .card5 .menuitems li:hover,
+.asdsection .card5:before,
 .asdsection .card5 bubble {
     background: var(--card5-color);
 }
 
 .titlecolor6,
 .card6 .menuitems li:hover,
+.asdsection .card6:before,
 .asdsection .card6 bubble {
     background: var(--card6-color);
 }
