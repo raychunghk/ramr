@@ -452,13 +452,14 @@ box-shadow: inset 0 0 15px rgba(55, 82, 170, 0), inset 0 0 8px rgba(255, 255, 25
     content: '';
     display: inline-block;
     width: inherit;
-    background: #dfdfdf;
+    background: #dfdfdf, url(static/images/concrete_seamless.png);
+    ;
     height: inherit;
-    border-radius: 3px;
+    border-radius: 4px;
     position: absolute;
     top: 2x;
     left: -2x;
-    filter: opacity(.5);
+    filter: opacity(.4) brightness(190%);
     z-index: 1;
 }
 
