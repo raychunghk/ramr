@@ -18,8 +18,8 @@
     --spacing-xxxl: 80px;
     --xbox1-color: rgba(230, 125, 64, 0.90);
     /*--card1-color: linear-gradient(319deg, rgb(239 131 77 / 94%) 0%, rgba(255, 153, 0, 0.84) 20%, rgba(255, 153, 0, 0.85) 66%, #ffd68e 100%);*/
-    --card1-color: linear-gradient(319deg, rgb(239 131 77 / 94%) 0%, rgba(255, 153, 0, 0.90) 20%, rgba(255, 153, 0, 0.92) 66%, #ffd68e 100%);
-    --card2-color: linear-gradient(305deg, #4851ba 0%, rgba(0, 102, 255, 0.85) 19%, rgba(0, 102, 255, 0.85) 80%, rgba(152, 192, 251, 1) 100%);
+    --card1-color: linear-gradient(319deg, rgba(239, 131, 77, 0.87) 0%, rgba(248, 161, 32, 0.904) 20%, rgba(248, 156, 18, 0.973) 66%, #ffd68e 100%);
+    --card2-color: linear-gradient(305deg, #4851ba 0%, rgba(0, 102, 255, 0.95) 19%, rgba(0, 102, 255, 0.98) 80%, rgba(152, 192, 251, 1) 100%);
     --card3-color: linear-gradient(305deg, rgb(73 225 10 / 94%) 0%, rgb(86 219 42 / 96%) 20%, rgb(117 215 89 / 95%) 66%, rgb(199 231 165) 100%);
     --card4-color: linear-gradient(305deg, rgba(158, 60, 207, 1) 0%, rgba(204, 102, 255, 0.95) 34%, rgba(204, 109, 251, 0.96) 80%, rgba(204, 157, 227, 0.94) 100%);
     --card5-color: linear-gradient(305deg, rgb(223, 172, 6) 0%, rgba(255, 230, 0, 0.95) 34%, rgba(255, 234, 0, 0.96) 80%, rgba(231, 218, 103, 0.94) 100%);
@@ -68,6 +68,11 @@
     background: white;
 }
 
+.card-header button *,
+.card-header button {
+    font-size: 1.3rem;
+}
+
 .card-header .input-group-text:first-child {
     background-image: var(--card1-color) !important;
     color: white;
@@ -105,21 +110,6 @@
     transform-origin: bottom left;
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
-
-
-/*
-nav.main-header h2 {
-    color: white;
-    font-size: 4em;
-    font-family: Optima;
-    /*gallery, serif;*/
-
-
-/*text-shadow: var(--h2bordercolor) 2px 0px 0px, var(--h2bordercolor) 1.75517px 0.958851px 0px, var(--h2bordercolor) 1.0806px 1.68294px 0px, var(--h2bordercolor) 0.141474px 1.99499px 0px, var(--h2bordercolor) -0.832294px 1.81859px 0px, var(--h2bordercolor) -1.60229px 1.19694px 0px, var(--h2bordercolor) -1.97998px 0.28224px 0px, var(--h2bordercolor) -1.87291px -0.701566px 0px, var(--h2bordercolor) -1.30729px -1.5136px 0px, var(--h2bordercolor) -0.421592px -1.95506px 0px, var(--h2bordercolor) 0.567324px -1.91785px 0px, var(--h2bordercolor) 1.41734px -1.41108px 0px, var(--h2bordercolor) 1.92034px -0.558831px 0px, #4e4a4ad1 0px 0px 5px*/
-
-
-/*  text-shadow: var(--subjectheader_shadow) !important;
-}*/
 
 nav.main-header h2 {
     font-size: 4em;
@@ -394,14 +384,14 @@ body {
     text-align: left;
 }
 
-.card-grid>li:nth-child(-n+3):hover .asdcard {
+.asdsection .card-grid>li:nth-child(-n+3):hover .asdcard {
     /*.fist row desktop mode :hover {*/
     position: absolute;
     animation: kfshiftcardup .3s forwards;
     transition: all .5s ease-in-out;
 }
 
-.card-grid>li:nth-child(n+4):hover .asdcard {
+.asdsection .card-grid>li:nth-child(n+4):hover .asdcard {
     /*.asdcard:hover {*/
     position: absolute;
     animation: kfshiftcardupb .3s forwards;
@@ -435,32 +425,33 @@ box-shadow: inset 0 0 15px rgba(55, 82, 170, 0), inset 0 0 8px rgba(255, 255, 25
     content: '';
     display: inline-block;
     width: inherit;
-    background: #dfdfdf;
+    background: #dfdfdf, url(static/images/concrete_seamless.png);
     height: inherit;
-    border-radius: 4px;
+    border-radius: 6px;
     position: absolute;
-    top: 14px;
+    top: 20px;
     left: 20px;
-    top: 2x;
-    left: -2x;
-    filter: brightness(1.9) opacity(0.4);
+    filter: opacity(0.4) brightness(2.2);
     z-index: 1;
 }
 
-.asdsection .grid>li:before,
-.asdsection .asdcard:before {
+.asdstyle2 .asdsection .grid>li:hover::after {
+    display: none;
+}
+
+.asdstyle2 .asdsection .grid>li:after {
     content: '';
     display: inline-block;
-    width: inherit;
-    background: #dfdfdf, url(static/images/concrete_seamless.png);
-    ;
-    height: inherit;
+    width: var(--card-width);
+    border: 1px solid rgb(54, 53, 54);
+    height: var(--card-height);
     border-radius: 4px;
     position: absolute;
-    top: 2x;
-    left: -2x;
-    filter: opacity(.4) brightness(190%);
-    z-index: 1;
+    top: -20px;
+    left: -20px;
+    filter: opacity(0.7) brightness(2.2);
+    z-index: 0;
+    pointer-events: none;
 }
 
 .asdsection .asdcard__background {
@@ -480,17 +471,17 @@ box-shadow: inset 0 0 15px rgba(55, 82, 170, 0), inset 0 0 8px rgba(255, 255, 25
     transition: filter 200ms linear, transform 200ms linear, height 0.5s linear ease-in-out;
 }
 
-.card-grid:hover li:not(:hover) .asdcard__background {
+.asdsection .card-grid:hover li:not(:hover) .asdcard__background {
     filter: brightness(75%) saturate(0.3) contrast(1.2) blur(2px);
     transition: all .3s ease-in-out;
 }
 
-.card-grid:hover li:not(:hover) .cardtitle {
+.asdsection .card-grid:hover li:not(:hover) .cardtitle {
     filter: brightness(75%) saturate(0.3) contrast(1.2);
     transition: all .3s ease-in-out;
 }
 
-.card-grid:hover li:not(:hover) {
+.asdsection .card-grid:hover li:not(:hover) {
     z-index: 1;
 }
 
@@ -517,7 +508,7 @@ box-shadow: inset 0 0 15px rgba(55, 82, 170, 0), inset 0 0 8px rgba(255, 255, 25
 
 .asdsection .asdcard__heading {
     color: white;
-    font-size: 1.7em;
+    font-size: 1.75rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 1.7;
     font-weight: bold;
@@ -543,10 +534,11 @@ box-shadow: inset 0 0 15px rgba(55, 82, 170, 0), inset 0 0 8px rgba(255, 255, 25
 .asdsection .cardtitle {
     overflow: hidden;
     margin-left: -50px;
-    width: calc(var(--card-width)*.9);
+    width: calc(var(--card-width)*1);
     padding: 8px 5px 2px 20px;
     height: 55px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;*/
+    box-shadow: inset 0 3px 2px rgb(255 255 255 / 22%), inset 0 -3px 2px rgb(0 0 0 / 17%), inset 0 20px 10px rgb(255 255 255 / 12%), 0 0 4px 1px rgb(0 0 0 / 10%), 0 3px 2px rgb(0 0 0 / 20%);
     z-index: 10;
     border-radius: var(--spacing-s);
     /*
@@ -590,55 +582,49 @@ transform: perspective(500px) scale(1.4) translateY(50px) translateX(20px) rotat
     filter: opacity(45%);
 }
 
-.titlecolor1,
-.card1 .menuitems li:hover,
+.asdsection .titlecolor1,
+.asdsection .card1 .menuitems li:hover,
 .asdsection .card1:before,
 .asdsection .card1 bubble {
     background: var(--card1-color);
 }
 
-.titlecolor2,
-.card2 .menuitems li:hover,
+.asdsection .titlecolor2,
+.asdsection .card2 .menuitems li:hover,
 .asdsection .card2:before,
 .asdsection .card2 bubble {
     background: var(--card2-color);
 }
 
-.titlecolor3,
-.card3 .menuitems li:hover,
+.asdsection .titlecolor3,
+.asdsection .card3 .menuitems li:hover,
 .asdsection .card3:before,
 .asdsection .card3 bubble {
     background: var(--card3-color);
 }
 
-.titlecolor4,
-.card4 .menuitems li:hover,
+.asdsection .titlecolor4,
+.asdsection .card4 .menuitems li:hover,
 .asdsection .card4:before,
 .asdsection .card4 bubble {
     background: var(--card4-color);
 }
 
-.titlecolor5,
-.card5 .menuitems li:hover,
+.asdsection .titlecolor5,
+.asdsection .card5 .menuitems li:hover,
 .asdsection .card5:before,
 .asdsection .card5 bubble {
     background: var(--card5-color);
 }
 
-.titlecolor6,
-.card6 .menuitems li:hover,
+.asdsection .titlecolor6,
+.asdsection .card6 .menuitems li:hover,
 .asdsection .card6:before,
 .asdsection .card6 bubble {
     background: var(--card6-color);
 }
 
-.cubewrap,
-.card-grid {
-    position: relative;
-    perspective: 1000px;
-}
-
-.cube {
+.asdsection .cube {
     perspective-origin: top left;
     /* transform: perspective(500px) scale3d(.9, .9, .9) rotateX(5deg) rotateY(-5deg) translate3d(0px, 0px, 0px) skew(0deg, 0deg);*/
     /*transform: rotate3d(1, -1, -.1, 15deg);*/
@@ -647,51 +633,51 @@ transform: perspective(500px) scale(1.4) translateY(50px) translateX(20px) rotat
     transition: all 2s ease-in-out;*/
 }
 
-.asdsection .card1 figcaption {
+.asdstyle2 .asdsection .card1 figcaption {
     background: var(--color-card1figcaption), white;
 }
 
-.asdsection .card2 figcaption {
+.asdstyle2 .asdsection .card2 figcaption {
     background: var(--color-card2figcaption), white;
 }
 
-.asdsection .card3 figcaption {
+.asdstyle2 .asdsection .card3 figcaption {
     background: var(--color-card3figcaption), white;
 }
 
-.asdsection .card4 figcaption {
+.asdstyle2 .asdsection .card4 figcaption {
     background: var(--color-card4figcaption), white;
 }
 
-.asdsection .card5 figcaption {
+.asdstyle2 .asdsection .card5 figcaption {
     background: var(--color-card5figcaption), white;
 }
 
-.asdsection .card6 figcaption {
+.asdstyle2 .asdsection .card6 figcaption {
     background: var(--color-card6figcaption), white;
 }
 
-.asdstyle2 .card1 figcaption {
+.asdsection .card1 figcaption {
     background: var(--color-card1figcaption), var(--urlmenubg1) !important
 }
 
-.asdstyle2 .card2 figcaption {
+.asdsection .card2 figcaption {
     background: var(--color-card2figcaption), var(--urlmenubg1)!important
 }
 
-.asdstyle2 .card3 figcaption {
+.asdsection .card3 figcaption {
     background: var(--color-card3figcaption), var(--urlmenubg1)!important
 }
 
-.asdstyle2 .card4 figcaption {
+.asdsection .card4 figcaption {
     background: var(--color-card4figcaption), var(--urlmenubg1)!important
 }
 
-.asdstyle2 .card5 figcaption {
+.asdsection .card5 figcaption {
     background: var(--color-card5figcaption), var(--urlmenubg1)!important
 }
 
-.asdstyle2 .card6 figcaption {
+.asdsection .card6 figcaption {
     background: var(--color-card6figcaption), var(--urlmenubg1)!important
 }
 
@@ -915,7 +901,7 @@ transform: perspective(500px) scale(1.4) translateY(50px) translateX(20px) rotat
     }
 }
 
-.cubewrap:hover {
+.asdsection .cubewrap:hover {
     position: relative;
     z-index: 99 !important;
     /* transform: translateY(var(--card-hoverup));*/
@@ -1008,7 +994,7 @@ div.divtheme {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(auto-fill, var(--card-height));
     }
-    .card {
+    .asdsection .card {
         display: grid !important;
         grid-template-rows: auto auto;
         height: 100%;
@@ -1078,11 +1064,6 @@ div.divtheme {
 }
 
 @media only screen and (min-width: 360px) and (max-width: 767px) {
-    .card {
-        position: relative;
-        display: flex !important;
-        flex-direction: column !important;
-    }
      :root {
         --text-light: rgba(255, 255, 255, 0.6);
         --text-lighter: rgba(255, 255, 255, 0.9);
@@ -1108,11 +1089,24 @@ div.divtheme {
         --buttonbar-height: 109px;
         --asdsection-height: calc(100vh - var(--buttonbar-height) - var(--header-height));
     }
-    .grid li:hover {
+    .card {
+        position: relative;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .asdsection .card-grid {
+        transition: all .5s ease;
+    }
+    .asdsection .grid>li:before,
+    .asdsection .asdcard:before {
+        display: none !important;
+        opacity: 0;
+    }
+    .asdsection .grid>li:hover {
         margin: 0 !important;
         height: 300px;
     }
-    .asdcard {
+    .asdsection .asdcard {
         float: left;
     }
     .asdsection figcaption {
@@ -1148,14 +1142,14 @@ div.divtheme {
     */
         box-shadow: rgb(50 50 93 / 25%) 0px 14px 29px -20px, rgb(0 0 0 / 30%) 0px 10px 17px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset, rgb(0 0 0 / 7%) 0px 1px 2px, rgb(0 0 0 / 7%) 0px 2px 4px, rgb(0 0 0 / 7%) 0px 4px 8px, rgb(0 0 0 / 7%) 0px 8px 16px, rgb(0 0 0 / 7%) 0px 16px 32px, rgb(0 0 0 / 7%) 0px 32px 64px;
     }
-    .card-grid>li:nth-child(n+4):hover figcaption,
-    .card-grid>li:nth-child(n+4) .asdcard:hover figcaption {
+    .asdsection .card-grid>li:nth-child(n+4):hover figcaption,
+    .asdsection .card-grid>li:nth-child(n+4) .asdcard:hover figcaption {
         pointer-events: auto;
         /*.fist row desktop mode :hover {*/
         min-height: 160px !important;
         height: auto !important;
     }
-    .card-grid>li:hover {
+    .asdsection .card-grid>li:hover {
         margin: 0 !important;
         height: 300px;
     }
@@ -1174,26 +1168,26 @@ div.divtheme {
             ;
         }
     }
-    .card-grid>li:last-child:hover .asdcard {
+    .asdsection .card-grid>li:last-child:hover .asdcard {
         /*.asdcard:hover {*/
         position: absolute !important;
         animation: kfshiftcardupmobile 2s forwards !important;
     }
-    .card-grid>li:last-child:hover {
+    .asdsection .card-grid>li:last-child:hover {
         margin-top: -30px !important;
     }
-    .card-grid>li:nth-child(n+4):hover {
+    .asdsection .card-grid>li:nth-child(n+4):hover {
         margin: 0 !important;
         height: 160px !important;
     }
-    .card-grid>li:hover .cardtitle,
+    .asdsection .card-grid>li:hover .cardtitle,
     .asdsection .asdcard:hover .cardtitle {
         transform: translateY(-45px);
         height: 35px;
         width: 100%;
         transition: all .5s ease-in-out;
     }
-    .card-grid>li:hover .asdcard__background,
+    .asdsection .card-grid>li:hover .asdcard__background,
     .asdsection .asdcard:hover .asdcard__background {
         height: var(--cardhover-bgheight);
         width: 89vw;
@@ -1217,8 +1211,8 @@ div.divtheme {
         width: calc(100%-20px);
         z-index: 30;
     }
-    .card-grid>li:nth-last-child(-n+2) .asdcard:hover,
-    .card-grid>li:nth-last-child(-n+2):hover .asdcard {
+    .asdsection .card-grid>li:nth-last-child(-n+2) .asdcard:hover,
+    .asdsection .card-grid>li:nth-last-child(-n+2):hover .asdcard {
         /*.asdcard:hover {*/
         position: absolute !important;
         animation: kfshiftcardupmobile .3s forwards !important;
@@ -1239,7 +1233,7 @@ div.divtheme {
             ;
         }
     }
-    .card-grid>li:hover .asdcard {
+    .asdsection .card-grid>li:hover .asdcard {
         position: relative !important;
         animation: none !important;
         margin: 0 auto !important;
@@ -1312,16 +1306,13 @@ div.divtheme {
         margin-left: 1px;
         width: 80vw !important;
     }
-    .cardtitle h3 {
+    .asdsection .cardtitle h3 {
         font-size: 1em !important;
     }
     .asdsection .card1:hover .menuitems {
         width: 85vw !important;
     }
-    .cardtitle h3 {
-        font-size: 1rem;
-    }
-    .card-grid>li:hover .asdcard {
+    .asdsection .card-grid>li:hover .asdcard {
         /*.fist row desktop mode :hover {*/
         position: absolute;
         transform: translateY(-50px);
