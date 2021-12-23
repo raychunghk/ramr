@@ -16,6 +16,8 @@
     --asdsection-height: calc(100vh - var(--buttonbar-height) - var(--header-height));
     --cardbgfilter: saturate(.8) grayscale(70%) sepia(5%) invert(0) contrast(100%);
     --spacing-xxxl: 80px;
+    --cardtitle-topmargin: calc(var(--card-height)*0.2);
+    --cardtitle-shiftdistance: calc(var(--card-height) * -0.15);
     --xbox1-color: rgba(230, 125, 64, 0.90);
     --card1-basecolor: 255, 120, 77;
     --dummy: rgb(236, 120, 77);
@@ -318,6 +320,8 @@ body {
 
 .asdsection .card1 .menuitems ul li {
     width: 98% !important;
+    min-height: 30px;
+    height: auto !important;
 }
 
 .asdsection .card1 .menuitems ul {
@@ -557,6 +561,7 @@ nav.navbar h2::first-letter {
 .asdsection .cardtitle {
     overflow: hidden;
     margin-left: -50px;
+    /*width: calc(var(--card-width)*1);*/
     width: calc(var(--card-width)*1);
     padding: 8px 5px 2px 20px;
     height: 55px;
@@ -838,6 +843,7 @@ transform: perspective(500px) scale(1.4) translateY(50px) translateX(20px) rotat
 }
 
 .asdsection .asdcard:hover .cardtitle {
+    /*transform: translateY(var(--cardtitle-shiftdistance)) scale(1.1);*/
     transform: translateY(calc(var(--card-height)*0.25*-1));
     transition: all .5s ease-in-out;
 }
@@ -853,7 +859,7 @@ transform: perspective(500px) scale(1.4) translateY(50px) translateX(20px) rotat
     margin-top: var(--menuitem-topmargin);
 }
 
-.asdsection .menuitems a {
+.asdsection .menuitems li a {
     -webkit-text-stroke: #450068;
     -webkit-text-stroke-width: 0.1px;
     position: relative;
@@ -864,6 +870,7 @@ transform: perspective(500px) scale(1.4) translateY(50px) translateX(20px) rotat
     margin-left: 3px;
     text-shadow: 0px 0px 1px rgb(0 58 255 / 63%);
     align-self: flex-end;
+    text-align: left !important;
 }
 
 .card2 .menuitems ul li:hover {
@@ -1303,6 +1310,9 @@ div.divtheme {
     }
     html {
         font-size: 14px;
+    }
+    .asdsection .menuitems ul ul {
+        width: 70vw !important;
     }
     .asdsection .card1 .menuitems ul {
         display: grid;
