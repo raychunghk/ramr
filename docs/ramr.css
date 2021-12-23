@@ -902,7 +902,7 @@ transform: perspective(500px) scale(1.4) translateY(50px) translateX(20px) rotat
 }
 
 .asdsection .menuitems ul li {
-    height: var(--menuitem-height);
+    min-height: var(--menuitem-height);
     font-size: 17px;
     font-family: sans-serif;
     padding: 1px;
