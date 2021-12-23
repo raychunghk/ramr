@@ -907,7 +907,8 @@ transform: perspective(500px) scale(1.4) translateY(50px) translateX(20px) rotat
     font-family: sans-serif;
     padding: 1px;
     border-radius: 3px;
-    width: 21vw !important;
+    width: 98% !important;
+    max-width:400px ;
     margin-right: 2%;
     display: flex !important;
     margin-top: 3px;
