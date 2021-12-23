@@ -1316,7 +1316,7 @@ div.divtheme {
     html {
         font-size: 14px;
     }
-    .asdsection .menuitems ul ul {
+    .asdsection .menuitems ul>li {
         width: 70vw !important;
     }
     .asdsection .card1 .menuitems ul {
