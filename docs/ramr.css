@@ -1363,7 +1363,7 @@ nav.navbar h2::first-letter {
 }
 
 div.divtheme {
-    display: none;
+    display: none !important;
 }
 
 @media(min-width: 960px) {
