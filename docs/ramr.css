@@ -140,9 +140,9 @@
 }
 
 .card-header button,
-.card-header .input-group-text:first-child ,
+.card-header .input-group-text:first-child,
 .asdstyle1 .card-header button,
-.asdstyle1 .card-header .input-group-text:first-child{
+.asdstyle1 .card-header .input-group-text:first-child {
     /*  background: var(--card1-color) !important;
     font-size: 1.2rem;*/
     background: linear-gradient(#fdfdfd, #dbd4df) !important;
@@ -153,10 +153,10 @@
 
 .asdstyle1 .card-header button,
 .asdstyle1 .card-header .input-group-text:first-child {
-   /* background: var(--card1-color);
+    /* background: var(--card1-color);
     color: white !important;
     /* -webkit-text-stroke: #101010 0.8px; */
-    font-weight: bolder; 
+    font-weight: bolder;
     font-size: 1.2rem;
     /*text-shadow: 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7) !important;*/
     text-shadow: 0px 1px 0px rgb(241 226 197), 0px -1px 0px #9fb5cd !important
@@ -193,6 +193,8 @@
 #shortcut_main_card .card-header span {
     margin-top: 2px;
 }
+
+
 /*
 .asdstyle1 .card-header [class*=icheck-]>input:first-child:checked+input[type=hidden]+label::after,
 .asdstyle1 .card-header [class*=icheck-]>input:first-child:checked+label::after {
@@ -212,8 +214,9 @@
 
 
 /*Checkbox on navbar*/
+
 .asdstyle1 [class*=icheck-]>input:first-child+input[type=hidden]+label::before,
-.asdstyle1 [class*=icheck-]>input:first-child+label::before ,
+.asdstyle1 [class*=icheck-]>input:first-child+label::before,
 .asdstyle4 [class*=icheck-]>input:first-child+input[type=hidden]+label::before,
 .asdstyle4 [class*=icheck-]>input:first-child+label::before {
     border: 2px solid #5a5059 !important;
@@ -221,7 +224,12 @@
     /*background: linear-gradient(to bottom, rgb(255 227 184) 0%, rgb(255 223 207) 50%, rgb(255 212 168) 51%, rgb(255 234 234) 100%) !important;*/
     /*background: linear-gradient(to bottom, rgba(249, 233, 192, 1) 0%, rgb(179, 159, 173) 64%, rgb(143, 141, 143) 79%, rgb(161, 158, 161) 100%);*/
 }
-/* not used  *//*
+
+
+/* not used  */
+
+
+/*
 .asdstyle1 [class*=icheck-]>input:first-child+input[type=hidden]+label::before,
 .asdstyle1 [class*=icheck-]>input:first-child+label::before {
     border: 2px solid #d97d3e !important; 
@@ -237,19 +245,21 @@
 .asdstyle4 nav.main-header h2 {
     text-shadow: var(--subjectheader_shadow) !important;
 }
+
 .asdstyle4 nav.main-header h2 {
     font-size: 4em;
     font-family: sans-serif;
     color: #979797;
-  
     -webkit-text-stroke: white 1px;
 }
+
 .asdstyle1 .main-header,
 .asdstyle2 .main-header,
 .asdstyle3 .main-header {
     background-color: rgba(255, 245, 245, 0.6) !important;
     z-index: 10
 }
+
 .asdstyle1 nav.main-header h2,
 .asdstyle2 nav.main-header h2,
 .asdstyle3 nav.main-header h2 {
@@ -404,23 +414,26 @@ html {
 .bodybackground3 {
     background: var(--color-gradientyellowbg);
 }
-.asdstyle4 .card-grid{
-    padding:50px 80px !important; 
+
+.asdstyle4 .card-grid {
+    padding: 50px 80px !important;
     background: #fdfdfd52;
     border-radius: 50px;
 }
+
 .ramrbackground {
-   /* background: var(--color-gradientorange)*/
-   /*background:url(static/images/bgtwilig.jpg);   */
-   background: rgb(244,223,201);
-   background: linear-gradient(144deg, rgba(244,223,201,1) 10%, rgba(235,211,140,1) 35%, rgba(232,188,134,1) 81%, rgba(201,148,215,1) 100%);
+    /* background: var(--color-gradientorange)*/
+    /*background:url(static/images/bgtwilig.jpg);   */
+    background: rgb(244, 223, 201);
+    background: linear-gradient(144deg, rgba(244, 223, 201, 1) 10%, rgba(235, 211, 140, 1) 35%, rgba(232, 188, 134, 1) 68%, rgba(245, 158, 45, 0.938) 100%);
     background-attachment: fixed;
-   background-size: cover;
+    background-size: cover;
 }
 
 .asdstyle1 .ramrbackground {
     background: var(--color-gradientyellowbg)
 }
+
 .asdstyle2 .bodybackgroundwongsir {
     background: linear-gradient(315deg, #dbb064c2 0%, #efce8fbf 19%, #ebd099bf 22%, #ffffff 100%), url(https://raw.githubusercontent.com/raychunghk/ramr/main/docs/static/images/sketch01.svg);
 }
@@ -782,10 +795,12 @@ nav.navbar h2::first-letter {
     transition: all .5s ease-in-out;
     filter: opacity(40%);
 }
+
 .asdstyle4 .menuitems li:hover,
 .asdsection .card1 .menuitems li:hover {
     box-shadow: rgba(var(--card1-basecolor), .8) 0px 1px 2px 0px, rgba(var(--card1-basecolor), .8) 0px 1px 3px 1px !important;
 }
+
 .asdstyle4 .asdcard::before,
 .asdsection .card1:before {
     background: var(--card1-bubblecolor) !important;
@@ -794,49 +809,53 @@ nav.navbar h2::first-letter {
 .asdsection .card1 bubble {
     background: var(--card1-bubblecolor);
 }
+
+
 /*Default colors*/
 
-
- .asdsection .titlecolor1,
- .asdsection .card1 .menuitems li:hover {
+.asdsection .titlecolor1,
+.asdsection .card1 .menuitems li:hover {
     background: var(--card1-style1color);
 }
 
- .asdsection .titlecolor2,
- .asdsection .card2 .menuitems li:hover,
- .asdsection .card2:before,
- .asdsection .card2 bubble {
+.asdsection .titlecolor2,
+.asdsection .card2 .menuitems li:hover,
+.asdsection .card2:before,
+.asdsection .card2 bubble {
     background: var(--card2-style1color);
 }
 
- .asdsection .titlecolor3,
- .asdsection .card3 .menuitems li:hover,
- .asdsection .card3:before,
- .asdsection .card3 bubble {
+.asdsection .titlecolor3,
+.asdsection .card3 .menuitems li:hover,
+.asdsection .card3:before,
+.asdsection .card3 bubble {
     background: var(--card3-style1color);
 }
 
- .asdsection .titlecolor4,
- .asdsection .card4 .menuitems li:hover,
- .asdsection .card4:before,
- .asdsection .card4 bubble {
+.asdsection .titlecolor4,
+.asdsection .card4 .menuitems li:hover,
+.asdsection .card4:before,
+.asdsection .card4 bubble {
     background: var(--card4-style1color);
 }
 
- .asdsection .titlecolor5,
- .asdsection .card5 .menuitems li:hover,
- .asdsection .card5:before,
- .asdsection .card5 bubble {
+.asdsection .titlecolor5,
+.asdsection .card5 .menuitems li:hover,
+.asdsection .card5:before,
+.asdsection .card5 bubble {
     background: var(--card5-style1color);
 }
 
- .asdsection .titlecolor6,
- .asdsection .card6 .menuitems li:hover,
- .asdsection .card6:before,
- .asdsection .card6 bubble {
+.asdsection .titlecolor6,
+.asdsection .card6 .menuitems li:hover,
+.asdsection .card6:before,
+.asdsection .card6 bubble {
     background: var(--card6-style1color);
 }
+
+
 /* default colors end */
+
 .asdstyle1 .asdsection .titlecolor1,
 .asdstyle1 .asdsection .card1 .menuitems li:hover {
     background: var(--card1-style1color);
@@ -877,42 +896,43 @@ nav.navbar h2::first-letter {
     background: var(--card6-style1color);
 }
 
-.asdstyle4 .asdsection  .titlecolor1,
-.asdstyle4 .asdsection  .card1 .menuitems li:hover {
+.asdstyle4 .asdsection .titlecolor1,
+.asdstyle4 .asdsection .card1 .menuitems li:hover {
     background: var(--card1-color);
 }
 
-.asdstyle4 .asdsection  .titlecolor2,
-.asdstyle4 .asdsection  .card2 .menuitems li:hover,
-.asdstyle4 .asdsection  .card2:before {
+.asdstyle4 .asdsection .titlecolor2,
+.asdstyle4 .asdsection .card2 .menuitems li:hover,
+.asdstyle4 .asdsection .card2:before {
     background: var(--card1-color);
 }
 
-.asdstyle4 .asdsection  .titlecolor3,
-.asdstyle4 .asdsection  .card3 .menuitems li:hover,
-.asdstyle4 .asdsection  .card3:before{
+.asdstyle4 .asdsection .titlecolor3,
+.asdstyle4 .asdsection .card3 .menuitems li:hover,
+.asdstyle4 .asdsection .card3:before {
     background: var(--card1-color);
 }
 
-.asdstyle4 .asdsection  .titlecolor4,
-.asdstyle4 .asdsection  .card4 .menuitems li:hover,
-.asdstyle4 .asdsection  .card4:before{
+.asdstyle4 .asdsection .titlecolor4,
+.asdstyle4 .asdsection .card4 .menuitems li:hover,
+.asdstyle4 .asdsection .card4:before {
     background: var(--card1-color);
 }
 
-.asdstyle4 .asdsection  .titlecolor5,
-.asdstyle4 .asdsection  .card5 .menuitems li:hover,
-.asdstyle4 .asdsection  .card5:before {
+.asdstyle4 .asdsection .titlecolor5,
+.asdstyle4 .asdsection .card5 .menuitems li:hover,
+.asdstyle4 .asdsection .card5:before {
     background: var(--card1-color);
 }
 
-.asdstyle4 .asdsection  .titlecolor6,
-.asdstyle4 .asdsection  .card6 .menuitems li:hover,
-.asdstyle4 .asdsection  .card6:before {
+.asdstyle4 .asdsection .titlecolor6,
+.asdstyle4 .asdsection .card6 .menuitems li:hover,
+.asdstyle4 .asdsection .card6:before {
     background: var(--card1-color);
 }
-.asdstyle4 .asdcard bubble{
-    background:var(--card1-bubblecolor);
+
+.asdstyle4 .asdcard bubble {
+    background: var(--card1-bubblecolor);
 }
 
 .asdsection .cube {
@@ -942,27 +962,33 @@ nav.navbar h2::first-letter {
 .asdstyle2 .asdsection .card6 figcaption {
     background: var(--color-card6figcaption), white;
 }
-.asdstyle3 .asdsection .card1 figcaption ,
+
+.asdstyle3 .asdsection .card1 figcaption,
 .asdstyle1 .asdsection .card1 figcaption {
     background: var(--color-card1figcaption), var(--urlmenubg1) !important
 }
-.asdstyle3 .asdsection .card2 figcaption ,
+
+.asdstyle3 .asdsection .card2 figcaption,
 .asdstyle1 .asdsection .card2 figcaption {
     background: var(--color-card2figcaption), var(--urlmenubg1)!important
 }
-.asdstyle3 .asdsection .card3 figcaption ,
+
+.asdstyle3 .asdsection .card3 figcaption,
 .asdstyle1 .asdsection .card3 figcaption {
     background: var(--color-card3figcaption), var(--urlmenubg1)!important
 }
-.asdstyle3  .asdsection .card4 figcaption ,
+
+.asdstyle3 .asdsection .card4 figcaption,
 .asdstyle1 .asdsection .card4 figcaption {
     background: var(--color-card4figcaption), var(--urlmenubg1)!important
 }
-.asdstyle3 .asdsection .card5 figcaption ,
+
+.asdstyle3 .asdsection .card5 figcaption,
 .asdstyle1 .asdsection .card5 figcaption {
     background: var(--color-card5figcaption), var(--urlmenubg1)!important
 }
-.asdstyle3 .asdsection .card6 figcaption ,
+
+.asdstyle3 .asdsection .card6 figcaption,
 .asdstyle1 .asdsection .card6 figcaption {
     background: var(--color-card6figcaption), var(--urlmenubg1)!important
 }
@@ -1108,8 +1134,9 @@ nav.navbar h2::first-letter {
     width: calc(var(--card-width) + 250px) !important;
     transform: translateY(-40px) !important;
 }
-.asdstyle3  .asdsection .asdcard:hover .asdcard__background {
- border-radius: var(--spacing-s);
+
+.asdstyle3 .asdsection .asdcard:hover .asdcard__background {
+    border-radius: var(--spacing-s);
     transform: translateY(-85px) !important;
 }
 
@@ -1123,6 +1150,7 @@ nav.navbar h2::first-letter {
     margin-left: -5px;
     transition: all .5s ease;
 }
+
 .asdstyle3 .asdsection .asdcard:hover .cardtitle {
     /*transform: translateY(var(--cardtitle-shiftdistance)) scale(1.1);*/
     /*transform: translateY(calc(var(--card-height)*0.32*-1));
@@ -1132,6 +1160,7 @@ nav.navbar h2::first-letter {
     border-radius: var(--spacing-s);
     transition: all .5s ease-in-out;
 }
+
 .asdsection .asdcard:hover .cardtitle {
     /*transform: translateY(var(--cardtitle-shiftdistance)) scale(1.1);*/
     /*transform: translateY(calc(var(--card-height)*0.32*-1));
@@ -1181,26 +1210,26 @@ nav.navbar h2::first-letter {
 }
 
 .card2 .menuitems ul li:hover {
-    box-shadow: rgba(var(--card2-basecolor), .5)0px 1px 2px 0px, rgba(var(--card2-basecolor), .5) 0px 1px 2px 1px ;
+    box-shadow: rgba(var(--card2-basecolor), .5)0px 1px 2px 0px, rgba(var(--card2-basecolor), .5) 0px 1px 2px 1px;
 }
 
 .card3 .menuitems ul li:hover {
-    box-shadow: rgba( var(--card3-basecolor), .5) 0px 1px 2px 0px, rgba( var(--card3-basecolor), .2) 0px 1px 2px 1px ;
+    box-shadow: rgba( var(--card3-basecolor), .5) 0px 1px 2px 0px, rgba( var(--card3-basecolor), .2) 0px 1px 2px 1px;
 }
 
 .card4 .menuitems ul li:hover {
-    box-shadow: rgba( var(--card4-basecolor), .8) 0px 1px 2px 0px, rgb(var(--card4-basecolor), .5) 0px 1px 3px 1px ;
+    box-shadow: rgba( var(--card4-basecolor), .8) 0px 1px 2px 0px, rgb(var(--card4-basecolor), .5) 0px 1px 3px 1px;
 }
 
 
 /*rgba(var(--color), 0.8)*/
 
 .card5 .menuitems ul li:hover {
-    box-shadow: rgb(var(--card5-basecolor), .5)0px 1px 2px 0px, rgb(var(--card5-basecolor), .5) 0px 1px 2px 1px ;
+    box-shadow: rgb(var(--card5-basecolor), .5)0px 1px 2px 0px, rgb(var(--card5-basecolor), .5) 0px 1px 2px 1px;
 }
- 
+
 .card6 .menuitems ul li:hover {
-    box-shadow: rgb(var(--card6-basecolor), .5)0px 1px 2px 0px, rgb(var(--card6-basecolor), .5) 0px 1px 2px 1px ;
+    box-shadow: rgb(var(--card6-basecolor), .5)0px 1px 2px 0px, rgb(var(--card6-basecolor), .5) 0px 1px 2px 1px;
 }
 
 .asdsection .menuitems ul li {
