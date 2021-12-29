@@ -34,6 +34,16 @@
     --card4-style1basecolordummy: rgb(158, 60, 207);
     --card5-style1basecolordummy: rgb(223, 172, 6);
     --card6-style1basecolordummy: rgb(207, 27, 78);
+    --card2-style3color: rgb(89, 161, 147);
+    --card3-style3color: rgb(194, 112, 176);
+    --card4-style3color: rgb(83, 143, 206);
+    --card5-style3color: rgb(101, 163, 66);
+    --card6-style3color: rgb(227, 102, 169);
+    --color-style3card2figcaption: linear-gradient(to bottom, rgba(89, 161, 147, 0.3) 0%, rgba(89, 161, 147, 0.3) 100%);
+    --color-style3card3figcaption: linear-gradient(to bottom, rgba(194, 112, 176, .6) 0%, rgba(194, 112, 176, 0.3) 100%);
+    --color-style3card4figcaption: linear-gradient(to bottom, rgba(83, 143, 206, .6) 0%, rgba(83, 143, 206, 0.3) 100%);
+    --color-style3card5figcaption: linear-gradient(to bottom, rgba(101, 163, 66, .6) 0%, rgba(101, 163, 66, 0.3) 100%);
+    --color-style3card6figcaption: linear-gradient(to bottom, rgba(212, 102, 161, .6) 0%, rgba(212, 102, 161, 0.3) 100%);
     --card1-style1color: linear-gradient(319deg, rgb(var(--card1-style1basecolor))0%, rgba(248, 161, 32, 0.904) 20%, rgba(248, 156, 18, 0.973) 66%, #ffd68e 100%);
     --card1-style1bubblecolor: linear-gradient(319deg, rgb(255 67 0 / 80%) 0%, rgb(247 72 18 / 73%) 20%, rgb(239 77 0 / 45%) 66%, #ffffff 100%);
     --card2-style1color: linear-gradient(305deg, rgb(var(--card2-style1basecolor))0%, rgba(0, 102, 255, 0.95) 19%, rgba(0, 102, 255, 0.98) 80%, rgba(152, 192, 251, 1) 100%);
@@ -121,10 +131,6 @@
     content: "";
 }
 
-.main-header {
-    background: rgb(102 102 102 / 99%) !important;
-}
-
 
 /*
 .card1 .cardtitle {
@@ -149,17 +155,6 @@
     color: #554d61 !important;
     /* -webkit-text-stroke: #101010 0.8px; */
     font-weight: bolder;
-}
-
-.asdstyle1 .card-header button,
-.asdstyle1 .card-header .input-group-text:first-child {
-    /* background: var(--card1-color);
-    color: white !important;
-    /* -webkit-text-stroke: #101010 0.8px; */
-    font-weight: bolder;
-    font-size: 1.2rem;
-    /*text-shadow: 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7) !important;*/
-    text-shadow: 0px 1px 0px rgb(241 226 197), 0px -1px 0px #9fb5cd !important
 }
 
 .card-header div.row>div:nth-child(n+2) {
@@ -218,7 +213,9 @@
 .asdstyle1 [class*=icheck-]>input:first-child+input[type=hidden]+label::before,
 .asdstyle1 [class*=icheck-]>input:first-child+label::before,
 .asdstyle4 [class*=icheck-]>input:first-child+input[type=hidden]+label::before,
-.asdstyle4 [class*=icheck-]>input:first-child+label::before {
+.asdstyle4 [class*=icheck-]>input:first-child+label::before,
+[class*=icheck-]>input:first-child+input[type=hidden]+label::before,
+[class*=icheck-]>input:first-child+label::before {
     border: 2px solid #5a5059 !important;
     background: linear-gradient(to bottom, rgb(239 239 239) 0%, rgb(206 202 211) 64%, rgb(207 201 207) 79%, rgb(215 215 215) 100%)
     /*background: linear-gradient(to bottom, rgb(255 227 184) 0%, rgb(255 223 207) 50%, rgb(255 212 168) 51%, rgb(255 234 234) 100%) !important;*/
@@ -236,6 +233,11 @@
     background: linear-gradient(to bottom, rgba(249, 233, 192, 1) 0%, rgba(247, 208, 111, 1) 64%, rgba(242, 204, 116, 1) 79%, rgba(251, 223, 147, 1) 100%);
 }*/
 
+.asdstyle4 .main-header .navbar-nav .nav-item a,
+.asdstyle4 .nav .nav-item a {
+    color: #fefeff;
+}
+
 .card-header input[type="checkbox"]::before {
     /* ...existing styles */
     transform-origin: bottom left;
@@ -244,25 +246,28 @@
 
 .asdstyle4 nav.main-header h2 {
     text-shadow: var(--subjectheader_shadow) !important;
-}
-
-.asdstyle4 nav.main-header h2 {
     font-size: 4em;
     font-family: sans-serif;
-    color: #979797;
+    color: #8f8f8f;
     -webkit-text-stroke: white 1px;
+}
+
+.asdstyle4 .main-header {
+    background-color: rgba(105, 103, 103, 0.849) !important;
 }
 
 .asdstyle1 .main-header,
 .asdstyle2 .main-header,
-.asdstyle3 .main-header {
+.asdstyle3 .main-header,
+.main-header {
     background-color: rgba(255, 245, 245, 0.6) !important;
     z-index: 10
 }
 
 .asdstyle1 nav.main-header h2,
 .asdstyle2 nav.main-header h2,
-.asdstyle3 nav.main-header h2 {
+.asdstyle3 nav.main-header h2,
+nav.main-header h2 {
     font-size: 4em;
     font-family: sans-serif;
     color: white;
@@ -421,20 +426,31 @@ html {
     border-radius: 50px;
 }
 
-.ramrbackground {
-    /* background: var(--color-gradientorange)*/
-    /*background:url(static/images/bgtwilig.jpg);   */
-    background: rgb(244, 223, 201);
-    background: linear-gradient(144deg, rgba(244, 223, 201, 1) 10%, rgba(235, 211, 140, 1) 35%, rgba(232, 188, 134, 1) 68%, rgba(245, 158, 45, 0.938) 100%);
+.asdstyle4 .ramrbackground {
+    background: linear-gradient(144deg, rgba(244, 223, 201, 1) 10%, rgba(235, 211, 140, 1) 35%, rgba(232, 188, 134, 1) 68%, rgb(245, 158, 45) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     background-attachment: fixed;
     background-size: cover;
+}
+
+.ramrbackground {
+    /*background: linear-gradient(144deg, rgba(244, 223, 201, 1) 10%, rgba(235, 211, 140, 1) 35%, rgba(232, 188, 134, 1) 68%, rgb(245, 158, 45) 100%);
+    */
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: var(--color-gradientyellowbg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.asdstyle3 .ramrbackground {
+    background: radial-gradient(ellipse at center, rgba(244, 223, 201, 1) 10%, rgba(252, 220, 156, 1) 35%, rgba(232, 188, 134, 1) 79%, rgba(245, 158, 45, 1) 100%);
 }
 
 .asdstyle1 .ramrbackground {
     background: var(--color-gradientyellowbg)
 }
 
-.asdstyle2 .bodybackgroundwongsir {
+.asdstyle2 .ramrbackground {
     background: linear-gradient(315deg, #dbb064c2 0%, #efce8fbf 19%, #ebd099bf 22%, #ffffff 100%), url(https://raw.githubusercontent.com/raychunghk/ramr/main/docs/static/images/sketch01.svg);
 }
 
@@ -600,6 +616,13 @@ box-shadow: inset 0 0 15px rgba(55, 82, 170, 0), inset 0 0 8px rgba(255, 255, 25
     z-index: 1;
 }
 
+.asdstyle3 .asdcard::before,
+.asdsection .grid>li:before {
+    filter: opacity(0.5) brightness(126%) saturate(157%) contrast(114%) !important;
+}
+
+.asdstyle4 .asdsection .grid>li:hover::after,
+.asdstyle3 .asdsection .grid>li:hover::after,
 .asdstyle2 .asdsection .grid>li:hover::after {
     display: none;
 }
@@ -608,17 +631,32 @@ nav.navbar h2::first-letter {
     color: red;
 }
 
+.asdstyle4 .asdsection .grid>li:after {
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: #59a394 0px 30px 60px -12px inset, #59a394 0px 18px 36px -18px inset;
+}
+
+.asdstyle2 .asdsection .grid>li:after {
+    filter: opacity(.8);
+    border: 1px solid rgb(54, 53, 54);
+}
+
+.asdstyle3 .asdsection .grid>li:after {
+    filter: opacity(70%) contrast(150%) brightness(150%) saturate(30%) !important;
+}
+
+.asdstyle4 .asdsection .grid>li:after,
+.asdstyle3 .asdsection .grid>li:after,
 .asdstyle2 .asdsection .grid>li:after {
     content: '';
     display: inline-block;
     width: var(--card-width);
-    border: 1px solid rgb(54, 53, 54);
     height: var(--card-height);
-    border-radius: 4px;
+    border-radius: 6px;
     position: absolute;
     top: -20px;
     left: -20px;
-    filter: opacity(0.7) brightness(2.2);
+    filter: opacity(0.3) brightness(2.2);
     z-index: 0;
     pointer-events: none;
 }
@@ -796,10 +834,12 @@ nav.navbar h2::first-letter {
     filter: opacity(40%);
 }
 
+
+/*
 .asdstyle4 .menuitems li:hover,
 .asdsection .card1 .menuitems li:hover {
     box-shadow: rgba(var(--card1-basecolor), .8) 0px 1px 2px 0px, rgba(var(--card1-basecolor), .8) 0px 1px 3px 1px !important;
-}
+}*/
 
 .asdstyle4 .asdcard::before,
 .asdsection .card1:before {
@@ -896,39 +936,63 @@ nav.navbar h2::first-letter {
     background: var(--card6-style1color);
 }
 
-.asdstyle4 .asdsection .titlecolor1,
-.asdstyle4 .asdsection .card1 .menuitems li:hover {
+
+/*style 4 apply same color to all cards*/
+
+.asdstyle4 .asdsection .cardtitle,
+.asdstyle4 .asdsection .menuitems li:hover,
+.asdstyle4 .asdsection .asdcard::before,
+.asdstyle3 .asdsection .grid>li:nth-child(1)::after {
     background: var(--card1-color);
 }
 
-.asdstyle4 .asdsection .titlecolor2,
-.asdstyle4 .asdsection .card2 .menuitems li:hover,
-.asdstyle4 .asdsection .card2:before {
-    background: var(--card1-color);
+
+/* style3 */
+
+.asdstyle3 .asdsection .titlecolor2,
+.asdstyle3 .asdsection .card2 .menuitems li:hover,
+.asdstyle3 .asdsection .card2:before,
+.asdstyle3 .asdsection figcaption,
+.asdstyle3 .asdsection .grid>li:nth-child(2)::after,
+.asdstyle3 .card2 bubble {
+    /*background: var(--card1-color);*/
+    background: var(--card2-style3color);
 }
 
-.asdstyle4 .asdsection .titlecolor3,
-.asdstyle4 .asdsection .card3 .menuitems li:hover,
-.asdstyle4 .asdsection .card3:before {
-    background: var(--card1-color);
+.asdstyle3 .asdsection .titlecolor3,
+.asdstyle3 .asdsection .card3 .menuitems li:hover,
+.asdstyle3 .asdsection .card3:before,
+.asdstyle3 .asdsection .grid>li:nth-child(3)::after,
+.asdstyle3 .card3 bubble {
+    /*background: var(--card1-color);*/
+    background: var(--card3-style3color);
 }
 
-.asdstyle4 .asdsection .titlecolor4,
-.asdstyle4 .asdsection .card4 .menuitems li:hover,
-.asdstyle4 .asdsection .card4:before {
-    background: var(--card1-color);
+.asdstyle3 .asdsection .titlecolor4,
+.asdstyle3 .asdsection .card4 .menuitems li:hover,
+.asdstyle3 .asdsection .card4:before,
+.asdstyle3 .asdsection .grid>li:nth-child(4)::after,
+.asdstyle3 .card4 bubble {
+    /*background: var(--card1-color);*/
+    background: var(--card4-style3color);
 }
 
-.asdstyle4 .asdsection .titlecolor5,
-.asdstyle4 .asdsection .card5 .menuitems li:hover,
-.asdstyle4 .asdsection .card5:before {
-    background: var(--card1-color);
+.asdstyle3 .asdsection .titlecolor5,
+.asdstyle3 .asdsection .card5 .menuitems li:hover,
+.asdstyle3 .asdsection .card5:before,
+.asdstyle3 .asdsection .grid>li:nth-child(5)::after,
+.asdstyle3 .card5 bubble {
+    /*background: var(--card1-color);*/
+    background: var(--card5-style3color);
 }
 
-.asdstyle4 .asdsection .titlecolor6,
-.asdstyle4 .asdsection .card6 .menuitems li:hover,
-.asdstyle4 .asdsection .card6:before {
-    background: var(--card1-color);
+.asdstyle3 .asdsection .titlecolor6,
+.asdstyle3 .asdsection .card6 .menuitems li:hover,
+.asdstyle3 .asdsection .card6:before,
+.asdstyle3 .asdsection .grid>li:nth-child(6)::after,
+.asdstyle3 .card6 bubble {
+    /*background: var(--card1-color);*/
+    background: var(--card6-style3color);
 }
 
 .asdstyle4 .asdcard bubble {
@@ -963,35 +1027,65 @@ nav.navbar h2::first-letter {
     background: var(--color-card6figcaption), white;
 }
 
-.asdstyle3 .asdsection .card1 figcaption,
+.asdsection .card1 figcaption,
 .asdstyle1 .asdsection .card1 figcaption {
     background: var(--color-card1figcaption), var(--urlmenubg1) !important
 }
 
-.asdstyle3 .asdsection .card2 figcaption,
+.asdsection .card2 figcaption,
 .asdstyle1 .asdsection .card2 figcaption {
     background: var(--color-card2figcaption), var(--urlmenubg1)!important
 }
 
-.asdstyle3 .asdsection .card3 figcaption,
+.asdsection .card3 figcaption,
 .asdstyle1 .asdsection .card3 figcaption {
     background: var(--color-card3figcaption), var(--urlmenubg1)!important
 }
 
-.asdstyle3 .asdsection .card4 figcaption,
+.asdsection .card4 figcaption,
 .asdstyle1 .asdsection .card4 figcaption {
     background: var(--color-card4figcaption), var(--urlmenubg1)!important
 }
 
-.asdstyle3 .asdsection .card5 figcaption,
+.asdsection .card5 figcaption,
 .asdstyle1 .asdsection .card5 figcaption {
     background: var(--color-card5figcaption), var(--urlmenubg1)!important
 }
 
-.asdstyle3 .asdsection .card6 figcaption,
+.asdsection .card6 figcaption,
 .asdstyle1 .asdsection .card6 figcaption {
     background: var(--color-card6figcaption), var(--urlmenubg1)!important
 }
+
+
+/* asdstyle3*/
+
+.asdstyle3 .asdsection .card1 figcaption {
+    background: var(--color-card1figcaption), var(--urlmenubg1) !important
+}
+
+.asdstyle3 .asdsection .card2 figcaption {
+    background: var(--color-style3card2figcaption), var(--urlmenubg1)!important
+}
+
+.asdstyle3 .asdsection .card3 figcaption {
+    background: var(--color-style3card3figcaption), var(--urlmenubg1)!important
+}
+
+.asdstyle3 .asdsection .card4 figcaption {
+    background: var(--color-style3card4figcaption), var(--urlmenubg1)!important
+}
+
+.asdstyle3 .asdsection .card5 figcaption {
+    background: var(--color-style3card5figcaption), var(--urlmenubg1)!important
+}
+
+.asdstyle3 .asdsection .card6 figcaption {
+    background: var(--color-style3card6figcaption), var(--urlmenubg1)!important
+}
+
+
+/*asdstyle4*/
 
 .asdstyle4 .asdsection .card1 figcaption {
     background: var(--color-card1figcaption), var(--urlmenubg1) !important
@@ -1209,6 +1303,8 @@ nav.navbar h2::first-letter {
     text-align: left !important;
 }
 
+
+/*
 .card2 .menuitems ul li:hover {
     box-shadow: rgba(var(--card2-basecolor), .5)0px 1px 2px 0px, rgba(var(--card2-basecolor), .5) 0px 1px 2px 1px;
 }
@@ -1221,8 +1317,7 @@ nav.navbar h2::first-letter {
     box-shadow: rgba( var(--card4-basecolor), .8) 0px 1px 2px 0px, rgb(var(--card4-basecolor), .5) 0px 1px 3px 1px;
 }
 
-
-/*rgba(var(--color), 0.8)*/
+ 
 
 .card5 .menuitems ul li:hover {
     box-shadow: rgb(var(--card5-basecolor), .5)0px 1px 2px 0px, rgb(var(--card5-basecolor), .5) 0px 1px 2px 1px;
@@ -1230,7 +1325,7 @@ nav.navbar h2::first-letter {
 
 .card6 .menuitems ul li:hover {
     box-shadow: rgb(var(--card6-basecolor), .5)0px 1px 2px 0px, rgb(var(--card6-basecolor), .5) 0px 1px 2px 1px;
-}
+}*/
 
 .asdsection .menuitems ul li {
     min-height: var(--menuitem-height);
@@ -1251,9 +1346,14 @@ nav.navbar h2::first-letter {
     padding-left: 8px;
 }
 
+
+/*
+.asdstyle4 .menuitems li:hover {
+    background-color: rgba(22, 109, 112, 0.712) !important;
+    
+}*/
+
 .asdsection .menuitems ul li:hover {
-    background-color: rgba(22, 109, 112, 0.712);
-    /*box-shadow: 3px 7px 46px 1px rgba(203, 223, 218, 0.75);*/
     transform: scale(1.03);
 }
 
