@@ -586,9 +586,25 @@
     <script defer="defer" src="static/js/colorjoe.scale.fix.js"></script>
     <script defer="defer" src="static/js/colorjoe.demo.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src='asdjs.js'></script>
-  
-   <script type='text/javascript'>
+   
+  <script type='text/plain' id='cardCssTemplate'>
+ 
+    .asdsection .%cardthemename% .cardtitle,
+    .asdstyle1 .asdsection .%cardthemename% .menuitems li:hover,
+    .asdsection .%cardthemename%:before,
+    .asdstyle1 .asdsection .%cardthemename% bubble {
+        background: %basecolor%;
+    }
+    .asdsection .%cardthemename% figcaption {
+        background: %figcaptioncolor%, var(--urlmenubg1) !important;
+    }
+    .asdsection .%cardthemename% .asdcard__background {
+        background-image: var(--card2bg);
+    }
+ 
+
+  </script>
+    <script type='text/javascript'>
  
         //remove the original card theme class name and insert the generated theme class name.
         $('#btnsavetheme').on('click', function (e) {
@@ -646,17 +662,7 @@
             basecolor = basecolortemplate.replaceAll('%hsldark%', hslaval);
          
             cardthemename = $('#txtcardthemename').val();
-            strCSS = " .asdsection .%cardthemename% .cardtitle, .asdstyle1 .asdsection .%cardthemename% .menuitems li:hover, \
-                                             .asdsection .%cardthemename%:before, .asdstyle1 .asdsection .%cardthemename% bubble {\
-                                               background: %basecolor%;\
-                                           }\
-                                           .asdsection .%cardthemename% figcaption {\
-                                               background: %figcaptioncolor%, var(--urlmenubg1)!important; \
-                                           }\
-                                           .asdsection .%cardthemename% .asdcard__background {\
-                                            background-image: var(--card2bg);\
-            }";
-
+            strCSS = $('#cardCssTemplate').html();
 
             if(sval<60 || lval > 50){
                 basecolor = basecolor+";   mix-blend-mode: normal !important;"
