@@ -646,7 +646,7 @@
             basecolor = basecolortemplate.replaceAll('%hsldark%', hslaval);
          
             cardthemename = $('#txtcardthemename').val();
-            basecolorcss = " .asdsection .%cardthemename% .cardtitle, .asdstyle1 .asdsection .%cardthemename% .menuitems li:hover, \
+            strCSS = " .asdsection .%cardthemename% .cardtitle, .asdstyle1 .asdsection .%cardthemename% .menuitems li:hover, \
                                              .asdsection .%cardthemename%:before, .asdstyle1 .asdsection .%cardthemename% bubble {\
                                                background: %basecolor%;\
                                            }\
@@ -655,12 +655,17 @@
                                            }\
                                            .asdsection .%cardthemename% .asdcard__background {\
                                             background-image: var(--card2bg);\
-                                        }"
-            basecolorcss = basecolorcss.replaceAll('%cardthemename%',cardthemename );
-            basecolorcss = basecolorcss.replaceAll('%basecolor%', basecolor)
-            basecolorcss = basecolorcss.replaceAll('%figcaptioncolor%', figcaptioncolor)
-           $('#txttheme').val(basecolorcss);
-           return basecolorcss;
+            }";
+
+            if(sval<60){
+                basecolor = basecolor+";   mix-blend-mode: normal !important;"
+                
+            }
+            strCSS = strCSS.replaceAll('%cardthemename%',cardthemename );
+            strCSS = strCSS.replaceAll('%basecolor%', basecolor)
+            strCSS = strCSS.replaceAll('%figcaptioncolor%', figcaptioncolor)
+           $('#txttheme').val(strCSS);
+           return strCSS;
         }
     </script>
 
