@@ -588,7 +588,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='asdjs.js'></script>
   
-    <script type='text/javascript'>
+   <script type='text/javascript'>
  
         //remove the original card theme class name and insert the generated theme class name.
         $('#btnsavetheme').on('click', function (e) {
@@ -602,13 +602,17 @@
             
             style = document.createElement('style');
             style.type = 'text/css';
-          
-            console.log('themename:')
-            console.log(cardthemename)
-            console.log('css:')
-            console.log(themecss)
-            style.innerHTML =themecss
-            document.getElementsByTagName('head')[0].appendChild(style);
+            style.id='tmpstyle';
+            if($('#tmpstyle').length >0){
+                $('#tmpstyle').html(themecss)
+            }else{
+                console.log('themename:')
+                console.log(cardthemename)
+                console.log('css:')
+                console.log(themecss)
+                style.innerHTML =themecss
+                document.getElementsByTagName('head')[0].appendChild(style);
+            }
     
             $('#card_theme_target').attr('class', 'asdcard cube ')
             $('#card_theme_target').addClass(cardthemename)
