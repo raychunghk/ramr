@@ -1,0 +1,105 @@
+<html>
+    <head><script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link href="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.css" rel="stylesheet">
+
+<script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.19.1/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+<style>
+.uppercase {
+  text-transform: uppercase;
+}
+/* wrap text*/
+.bootstrap-table .th-inner{
+  white-space: normal !important;
+}
+table{
+  table-layout: fixed;
+  width:2000px;
+}
+
+/*fix height when wrap text, need to use javascript to make it work*/
+.bootstrap-table .fixed-table-header{
+  height:auto !important;
+}
+</style>
+</head>
+<body>
+<table
+  id="table"
+  data-toggle="table"
+  data-height="460"
+  data-header-style="headerStyle"
+  data-filter-control="true"
+ 
+  data-url="data1.json">
+  <thead>
+    <tr>
+      <th data-field="id">Item ID</th>
+      <th data-field="name"  data-filter-control="input"  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et d</th>
+      <th data-field="price"  data-filter-control="input">Item Price</th>
+      <th data-field="price"  data-filter-control="input">Item Price2</th>
+      <th data-field="price"  data-filter-control="input">Item Price3</th>
+      <th data-field="price"  data-filter-control="input">Item Price4</th>
+      <th data-field="price"  data-filter-control="input">Item Price5</th>
+      <th data-field="price"  data-filter-control="input">Item Price6</th>
+      <th data-field="price"  data-filter-control="input">Item Price7</th>
+      <th data-field="price"  data-filter-control="input">Item Price8</th>
+      <th data-field="price"  data-filter-control="input">Item Price9</th>
+      <th data-field="price"  data-filter-control="input">Item Price10</th>
+    </tr>
+  </thead>
+</table>
+
+<script>
+  function headerStyle(column) {
+    return {
+      id: {
+        classes: 'uppercase'
+      },
+      name: {
+        css: {background: 'yellow' ,width:'250px'}
+      },
+      price: {
+        css: {color: 'red'}
+      }
+    }[column.field]
+  }
+
+</script>
+<script>
+  $(function() {
+    
+    $('#table').bootstrapTable();
+	//plugin for detech style change 
+	(function() {
+	    orig = $.fn.css;
+	    $.fn.css = function() {
+	        var result = orig.apply(this, arguments);
+	        $(this).trigger('stylechanged');
+	        return result;
+	    }
+	})();
+    // observer data table style change
+    $('div.bootstrap-table .fixed-table-body table').on('stylechanged', function () {
+		updatetblBodyTopMargin();
+	});
+
+ 
+  })
+  
+  //this function is created to help fix some position problem with css rule: .fixed-table-header height:auto
+  function updatetblBodyTopMargin(){
+  	    tblHeaderHeight = $(' div.bootstrap-table .fixed-table-header').height()
+  	    tblMarginTop = document.querySelector('div.bootstrap-table .fixed-table-body table').computedStyleMap().get('margin-top').value;
+   
+    	if(tblMarginTop < tblHeaderHeight){    	
+    		
+    		document.querySelector('div.bootstrap-table .fixed-table-body table').style.marginTop = (tblHeaderHeight*-1)+'px'
+    	}
+ 
+  }
+ 
+ 
+</script>
+</body>
+</html>
